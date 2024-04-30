@@ -1,5 +1,9 @@
 version: '3.1'
 intents:
+- op1
+- op2
+- op3
+- menu 
 - atestado_matricula
 - atestado_matricula_digital
 - atestado_matricula_fisico
@@ -36,6 +40,13 @@ actions:
 - validate_requerer_documento_form
 
 responses:
+  utter_menu: 
+  - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar e irei aprententar o menu de opções. 
+  utter_op:
+  - text: 1. site do campus.
+  - text: 2. Atestado de matricula.
+  - text: 3. Localizção do ifsc.
+  - text: o que deseja procurar.
   utter_saudar:
   - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar.
   - text: Oi! Sou o chatbot do IFSC Câmpus Gaspar.

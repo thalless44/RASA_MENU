@@ -4,8 +4,14 @@ stories:
   - story: Saudação
     steps:
     - intent: saudar
-    - action: utter_saudar
-    - action: utter_como_ajudar
+    - action: utter_menu
+    - action: utter_op
+    - intent: op1
+    - action: utter_site_campus
+    - intent: op2 
+    - action: utter_testando
+    - intent: op3 
+    - action: utter_localizacao_campus
   
   - story: Testando
     steps:

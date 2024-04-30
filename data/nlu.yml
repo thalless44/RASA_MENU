@@ -7,6 +7,27 @@ nlu:
     - oie
     - e aí?
     - como vai?
+- intent: menu 
+  examples: |
+    - menu
+    - mostre o menu
+    - quero ver o menu 
+    - apresente o menu
+- intent: op1
+  exemples: |
+    - 1
+- intent: op2
+  exemples: |
+    -2
+- intent: op3
+  exemples: |
+    -3
+
+
+
+
+
+
 - intent: testando
   examples: |
     - testando

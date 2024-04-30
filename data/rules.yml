@@ -5,8 +5,8 @@ rules:
 - rule: Saudação
   steps:
   - intent: saudar
-  - action: utter_saudar
-  - action: utter_como_ajudar
+  - action: utter_menu
+  - action: utter_op
 
 - rule: Fora de escopo
   steps:
