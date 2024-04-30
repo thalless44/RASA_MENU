@@ -1,0 +1,72 @@
+version: "3.1"
+
+stories:
+  - story: Saudação
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_como_ajudar
+  
+  - story: Testando
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_como_ajudar
+    - intent: testando
+    - action: utter_testando
+  
+  - story: Não ajudar
+    steps:
+    - action: utter_como_ajudar
+    - intent: nao_ajudar
+    - action: utter_nao_ajudar
+  
+  - story: Perguntar localização do campus
+    steps:
+    - intent: localizacao_campus
+    - action: utter_localizacao_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: Perguntar localização do campus
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_como_ajudar
+    - intent: localizacao_campus
+    - action: utter_localizacao_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: Perguntar localização e horários do campus
+    steps:
+    - intent: localizacao_campus
+    - action: utter_localizacao_campus
+    - action: utter_como_ajudar_mais
+    - intent: horario_campus
+    - action: action_processar_horario_campus
+    - action: utter_como_ajudar_mais
+
+  - story: Perguntar horários do campus
+    steps:
+    - intent: horario_campus
+    - action: action_processar_horario_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: Perguntar horários do campus
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_como_ajudar
+    - intent: horario_campus
+    - action: action_processar_horario_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: Cancelar matrícula
+    steps:
+    - intent: cancelar_matricula
+    - action: utter_cancelar_matricula
+    - action: utter_cancelar_matricula_passos_1
+    - action: utter_cancelar_matricula_passos_2
+    - action: utter_cancelar_matricula_passos_3
+    - action: utter_como_ajudar_mais
+    - intent: out_of_scope
+    - action: utter_default
