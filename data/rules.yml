@@ -19,8 +19,8 @@ rules:
   steps:
   - intent: op2 
   - action: utter_testando
-  - rule: opção3
-- steps:
+- rule: opção3
+  steps:
   - intent: op3 
   - action: utter_localizacao_campus
 
