@@ -14,20 +14,14 @@ nlu:
     - quero ver o menu 
     - apresente o menu
 - intent: op1
-  exemples: |
+  examples: |
     - 1
 - intent: op2
-  exemples: |
+  examples: |
     -2
 - intent: op3
-  exemples: |
+  examples: |
     -3
-
-
-
-
-
-
 - intent: testando
   examples: |
     - testando
