@@ -5,8 +5,25 @@ rules:
 - rule: Saudação
   steps:
   - intent: saudar
+  - action: utter_saudar
+- rule: menu
+  steps:
+  - intent: menu
   - action: utter_menu
   - action: utter_op
+- rule: opção1
+    steps:
+    - intent: op1
+    - action: utter_site_campus
+  - rule: opção2
+    steps:
+    - intent: op2 
+    - action: utter_testando
+  - rule: opção3
+    steps:
+    - intent: op3 
+    - action: utter_localizacao_campus
+
 
 - rule: Fora de escopo
   steps:
