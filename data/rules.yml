@@ -5,7 +5,6 @@ rules:
   steps:
   - intent: saudar
   - action: utter_menu_opcoes
-  - action: utter_como_ajudar
 
 - rule: Escolha de Opção
   condition:
