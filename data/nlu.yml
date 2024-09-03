@@ -1,0 +1,174 @@
+version: "3.1"
+nlu:
+- intent: saudar
+  examples: |
+    - oi
+    - olá
+    - oie
+    - e aí?
+    - como vai?
+- intent: testando
+  examples: |
+    - testando
+    - teste
+    - teste teste
+    - teste 1 2 3
+    - teste 123
+- intent: localizacao_campus
+  examples: |
+    - onde fica o campus?
+    - onde fica o IFSC?
+    - onde fica o IFSC Gaspar?
+    - cadê o IFSC Campus Gaspar?
+    - onde fica o IFSC Câmpus Gaspar?
+    - onde achar o IFSC?
+- intent: site_campus
+  examples: |
+    - qual o site do campus?
+    - qual o site do IFSC?
+    - qual o site do IFSC Gaspar?
+    - qual o site do IFSC Campus Gaspar?
+    - qual o site do IFSC Câmpus Gaspar?
+- intent: contar_piada
+  examples: |
+    - conte uma piada
+    - conte uma piada para mim
+    - conte uma piada por favor
+    - inventa uma piada
+    - piada
+- intent: horario_campus
+  examples: |
+    - qual o horário de funcionamento do campus?
+    - qual o horário de funcionamento do IFSC?
+    - qual o horário de funcionamento do IFSC Gaspar?
+    - qual o horário de funcionamento do IFSC Campus Gaspar?
+    - qual o horário de funcionamento do IFSC Câmpus Gaspar?
+    - o campus está aberto?
+    - quando abre o campus?
+    - quando fecha o campus?
+    - qual o horário do campus?
+- intent: requerer_documento
+  examples: |
+    - [atestado de frequência](documento)
+    - [atestado de matricula](documento)
+    - preciso do [atestado de matricula](documento) [digital](tipo_documento)
+    - quero um [atestado de matricula](documento) [digital](tipo_documento)
+    - como consigo o [atestado de frequência](documento) [digital](tipo_documento)?
+    - quero um comprovante que estou matriculado no IFSC
+    - preciso de um documento
+    - quero um documento
+    - quero um [atestado de matricula](documento)
+    - preciso de um [atestado de frequência](documento)
+    - Preciso de um [atestado de matrícula](documento)
+- intent: informar_requerer_documento
+  examples: |
+    - [digital](tipo_documento)
+    - [físico](tipo_documento)
+    - [impresso](tipo_documento)
+    - preciso de um [atestado de frequência](documento)
+    - Preciso de um [atestado de matrícula](documento)
+- intent: cancelar_matricula
+  examples: |
+    - quero cancelar minha matrícula
+    - como cancelo matricula
+    - quero trancar o curso
+    - quero trancar a matricula
+    - quero trancar a matrícula
+- intent: possui_conta
+  examples: |
+    - sim
+    - sim, tenho conta no SIGAA
+    - possuo conta no SIGAA
+    - possuo conta
+    - tenho cadastro
+    - Sim
+- intent: nao_possui_conta
+  examples: |
+    - não
+    - não tenho conta
+    - ainda nao tenho conta
+    - não possuo conta
+    - não tenho cadastro
+- intent: out_of_scope
+  examples: |
+    - Quero pedir comida
+    - O que é 2 + 2?
+    - Quero comprar um carro
+    - Quero comprar um celular
+    - Preciso de uma boia
+    - Maçã
+- intent: chegada_tardia
+  examples: |
+    - cheguei atrasado
+    - cheguei atrasada
+    - cheguei atrasado na aula
+    - cheguei atrasada na aula
+    - cheguei atrasado e preciso do papel para justificar
+    - cheguei atrasada e preciso do papel para justificar
+    - cheguei atrasado e sou do [I6](turma)
+    - cheguei atrasado e me chamo [João Gabriel](nome)
+- intent: nao_ajudar
+  examples: |
+    - não precisa
+    - não obrigado
+    - tudo certo por aqui
+    - não quero nada
+- intent: informar_chegada_tardia
+  examples: |
+    - meu nome é [João Gabriel](nome)
+    - [João Gabriel](nome)
+    - [Andrei](nome)
+    - [Nicolas](nome)
+    - [Carlos](nome)
+    - [Rafaela](nome)
+    - [Benjamin](nome)
+    - [Luna](nome)
+    - me chamo [Clara](nome)
+    - estudo no [I6](turma)
+    - [I1](turma)
+    - [I3](turma)
+    - [I5](turma)
+    - [Q1](turma)
+    - [Q3](turma)
+    - [Q5](turma)
+    - [Informática 1](turma)
+    - [Informática 3](turma)
+    - [Informática 6](turma)
+    - [Info 1](turma)
+    - [Info 2](turma)
+    - [Info 4](turma)
+    - [Química 1](turma)
+    - [Química 2](turma)
+    - [Química 6](turma)
+- synonym: atestado_matricula
+  examples: |
+    - atestado de matricula
+    - atestado de matrícula
+    - documento de matricula
+    - documento de matrícula
+    - certidao de matricula
+    - certidao de matrícula
+    - matricula
+    - matrícula
+- synonym: atestado_frequencia
+  examples: |
+    - atestado de frequencia
+    - atestado de frequência
+    - documento de frequência
+    - certidao de frequência
+    - frequência
+    - frequencia
+- synonym: digital
+  examples: |
+    - digitalmente
+    - online
+- synonym: fisico
+  examples: |
+    - em papel
+    - fisico
+    - fisica
+    - físico
+    - física
+    - fisicamente
+    - impressa
+    - impresso
