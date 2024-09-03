@@ -21,6 +21,41 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.types import DomainDict
 
+
+
+
+class ActionTratarEscolha(Action):
+    def name(self):
+        return "action_tratar_escolha"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: dict):
+        
+        escolha = tracker.latest_message['text']
+        
+        if '1' in escolha:
+            dispatcher.utter_message(response="utter_localizacao_campus")
+            # Lógica adicional para "Informações sobre o campus"
+        elif '2' in escolha:
+            dispatcher.utter_message(response="utter_requerer_documento")
+            # Lógica adicional para "Requerer documentos"
+        elif '3' in escolha:
+            dispatcher.utter_message(response="utter_cancelar_matricula")
+            # Lógica adicional para "Cancelar matrícula"
+        elif '4' in escolha:
+            dispatcher.utter_message(response="utter_chegada_tardia")
+            # Lógica adicional para "Informar chegada tardia"
+        elif '5' in escolha:
+            dispatcher.utter_message(response="utter_out_of_scope")
+            # Lógica adicional para "Outras opções"
+        else:
+            dispatcher.utter_message(response="utter_ask_rephrase")
+        
+        return []
+
+
+
 class ActionProcessarHorarioCampus(Action):
     def name(self) -> Text:
         return "action_processar_horario_campus"

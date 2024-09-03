@@ -36,6 +36,20 @@ actions:
 - validate_requerer_documento_form
 
 responses:
+
+
+responses:
+  utter_menu_opcoes:
+  - text: |
+      Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:
+      1. **Informações sobre o campus** 
+      2. **Requerer documentos** 
+      3. **Cancelar matrícula** 
+      4. **Informar chegada tardia** 
+      5. **Outras opções**
+      Escolha uma opção digitando o número correspondente.
+
+
   utter_saudar:
   - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar.
   - text: Oi! Sou o chatbot do IFSC Câmpus Gaspar.

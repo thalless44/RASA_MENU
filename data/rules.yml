@@ -1,6 +1,20 @@
 version: "3.1"
 
 rules:
+- rule: Exibir Menu de Opções
+  steps:
+  - intent: saudar
+  - action: utter_menu_opcoes
+  - action: utter_como_ajudar
+
+- rule: Escolha de Opção
+  condition:
+  - slot_was_set:
+    - escolha_opcao: true
+  steps:
+  - action: action_tratar_escolha
+
+
 
 - rule: Saudação
   steps:
