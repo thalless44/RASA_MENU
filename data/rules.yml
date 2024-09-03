@@ -14,8 +14,6 @@ rules:
   steps:
   - action: action_tratar_escolha
 
-
-
 - rule: Saudação
   steps:
   - intent: saudar
