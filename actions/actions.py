@@ -25,7 +25,7 @@ from rasa_sdk.types import DomainDict
 
 
 class ActionTratarEscolha(Action):
-    def name(self) -> Text:
+    def name(self):
         return "action_tratar_escolha"
 
     def run(self, dispatcher: CollectingDispatcher,
