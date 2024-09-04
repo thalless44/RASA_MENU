@@ -1,159 +1,127 @@
 version: "3.1"
 
 intents:
-- atestado_matricula
-- atestado_matricula_digital
-- atestado_matricula_fisico
-- cancelar_matricula
-- chegada_tardia
-- documento
-- horario_campus
-- informar_chegada_tardia
-- informar_requerer_documento
-- localizacao_campus
-- nao_possui_conta
-- out_of_scope
-- possui_conta
-- nao_ajudar
-- requerer_documento
-- saudar
-- tipo_documento
-- contar_piada
-- site_campus
-- testando
+  - atestado_matricula
+  - atestado_matricula_digital
+  - atestado_matricula_fisico
+  - cancelar_matricula
+  - chegada_tardia
+  - documento
+  - informar_chegada_tardia
+  - informar_requerer_documento
+  - localizacao_campus
+  - out_of_scope
+  - requerer_documento
+  - tipo_documento
 
 entities:
-- tipo_documento
-- documento
-- possui_conta
-- nome
-- turma
+  - tipo_documento
+  - documento
+  - possui_conta
+  - nome
+  - turma
 
 actions:
-- action_processar_horario_campus
-- action_enviar_requerer_documento
-- action_enviar_chegada_tardia
-- validate_chegada_tardia_form
-- validate_requerer_documento_form
+  - action_processar_horario_campus
+  - action_enviar_requerer_documento
+  - action_enviar_chegada_tardia
+  - validate_chegada_tardia_form
+  - validate_requerer_documento_form
+  - action_tratar_escolha
 
 responses:
   utter_menu_opcoes:
-  - text: |
-      Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:
-      1. **Informações sobre o campus** 
-      2. **Requerer documentos** 
-      3. **Cancelar matrícula** 
-      4. **Informar chegada tardia** 
-      5. **Outras opções**
-      Escolha uma opção digitando o número correspondente.
+    - text: |
+        Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:
+        1. **Informações sobre o campus** 
+        2. **Requerer documentos** 
+        3. **Cancelar matrícula** 
+        4. **Informar chegada tardia** 
+        5. **Outras opções**
+        Escolha uma opção digitando o número correspondente.
 
-  utter_saudar:
-  - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar.
-  - text: Oi! Sou o chatbot do IFSC Câmpus Gaspar.
-  - text: E aí? Eu sou o chatbot do IFSC Câmpus Gaspar.
   utter_localizacao_campus:
-  - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
-  utter_site_campus:
-  - text: O site do IFSC Câmpus Gaspar é https://www.ifsc.edu.br/web/campus-gaspar. Caso você queira saber mais sobre o IFSC, acesse https://www.ifsc.edu.br/.
-  utter_testando:
-  - text: Testando, 123... tem alguém aí?
-  utter_como_ajudar:
-  - text: Como posso te ajudar?
-  - text: Em que posso ajudar?
-  - text: O que posso fazer por você?
-  utter_como_ajudar_mais:
-  - text: Há algo mais em que posso te ajudar?
-  - text: Posso lhe ajudar com algo mais?
-  utter_nao_ajudar:
-  - text: Tudo bem. Estarei aqui caso você precise de algo.
-  utter_possui_conta:
-  - text: Ótimo!
-  utter_criar_conta:
-  - text: Tudo bem. Já que ainda não tem login e senha do aluno, você precisa enviar um e-mail para a Secretaria (secretaria.gaspar@ifsc.edu.br) e solicitar uma nova senha. Ah, e para sua segurança, você também precisará de uma foto frente e verso do seu documento de identidade.
-  utter_cancelar_matricula:
-  - text: 'Entendido! O cancelamento de matrícula deve ser feito em algumas etapas:'
-  utter_cancelar_matricula_passos_1:
-  - text: Primeiramente, faça o download do requerimento disponível no [link](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) e preencha-o.
-  utter_cancelar_matricula_passos_2:
-  - text: Então, digitalize o requerimento e envie para a secretaria do IFSC Campus Gaspar em [secretaria.gaspar@ifsc.edu.br](mailto:secretaria.gaspar@ifsc.edu.br) junto de um documento de identificação. Caso o aluno seja menor de idade, no requerimento deve constar também a assinatura e documento do responsável. Caso necesário, o requerimento pode ser retirado impresso na secretaria do IFSC Campus Gaspar.
-  utter_cancelar_matricula_passos_3:
-  - text: Por fim, o documento passará por tramitação da Biblioteca Acadêmica e da Coordenadoria de Curso para análise. O aluno será informado por e-mail sobre o andamento e o resultado da análise.
-  utter_ask_rephrase:
-  - text: Desculpe. Não consegui entender o seu pedido. Você poderia tentar de novo?
-  utter_default:
-  - text: Desculpe, não consigo te ajudar. Você poderia tentar de novo?
-  utter_chegada_tardia:
-  - text: Vixe. Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
-  utter_ask_nome:
-  - text: Qual o seu nome?
-  utter_ask_turma:
-  - text: Qual a sua turma?
-  utter_requerer_documento:
-  - text: Posso ajudar com isso!
-  utter_ask_documento:
-  - text: Qual documento você precisa? (atestado de matrícula ou atestado de frequência)
-  utter_ask_tipo_documento:
-  - text: Você pode obter seu documento digitalmente ou fisicamente. Qual você prefere?
-  utter_ask_possui_conta:
-  - text: Você já possui uma conta no SIGAA?
-  utter_contar_piada:
-  - text: "O que um pontinho vermelho está procurando em Gaspar?\nNove quadrados verdes. 🔴🟩"
-  - text: "O que o IFSC e o espaço têm em comum?\nAmbos estão cheios de estrelas. ⭐️"
-  - text: "Como que estudantes de informática se despedem?\n Com bye-bye-bytes. 👋"
-  - text: "O que é um terapeuta?\n1.024 gigapeutas."
-  - text: "int x=10; int y=10; return x+y; // Qual o nome do filme?\nO Código dá Vinte"
-  - text: "O que um álcool disse para o outro?\nEtanóis! 👋"
-  - text: "Beleza. Vou contar uma piada sobre potássio...\nKKKKKKKKKKKKK"
-  - text: "Sabe o que um cromossomo falou para o outro?\nCromossomos felizes!"
-  - text: "Um buraco negro é um tunel no fim da luz."
+    - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
 
+  utter_cancelar_matricula:
+    - text: 'Entendido! O cancelamento de matrícula deve ser feito em algumas etapas:'
+
+  utter_cancelar_matricula_passos_1:
+    - text: Primeiramente, faça o download do requerimento disponível no [link](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) e preencha-o.
+
+  utter_cancelar_matricula_passos_2:
+    - text: Então, digitalize o requerimento e envie para a secretaria do IFSC Campus Gaspar em [secretaria.gaspar@ifsc.edu.br](mailto:secretaria.gaspar@ifsc.edu.br) junto de um documento de identificação. Caso o aluno seja menor de idade, no requerimento deve constar também a assinatura e documento do responsável. Caso necesário, o requerimento pode ser retirado impresso na secretaria do IFSC Campus Gaspar.
+
+  utter_cancelar_matricula_passos_3:
+    - text: Por fim, o documento passará por tramitação da Biblioteca Acadêmica e da Coordenadoria de Curso para análise. O aluno será informado por e-mail sobre o andamento e o resultado da análise.
+
+  utter_ask_rephrase:
+    - text: Desculpe. Não consegui entender o seu pedido. Você poderia tentar de novo?
+
+  utter_chegada_tardia:
+    - text: Vixe. Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
+
+  utter_requerer_documento:
+    - text: Posso ajudar com isso!
+
+  utter_ask_documento:
+    - text: Qual documento você precisa? (atestado de matrícula ou atestado de frequência)
+
+  utter_ask_tipo_documento:
+    - text: Você pode obter seu documento digitalmente ou fisicamente. Qual você prefere?
 
 slots:
   documento:
     type: categorical
     values:
-    - atestado_matricula
-    - atestado_frequencia
+      - atestado_matricula
+      - atestado_frequencia
     mappings:
-    - type: from_entity
-      entity: documento
+      - type: from_entity
+        entity: documento
+
   tipo_documento:
     type: categorical
     values:
-    - digital
-    - físico
+      - digital
+      - físico
     mappings:
-    - type: from_entity
-      entity: tipo_documento
+      - type: from_entity
+        entity: tipo_documento
+
   possui_conta:
     type: bool
     mappings:
-    - type: from_intent
-      value: true
-      intent: possui_conta
-    - type: from_intent
-      value: true
-      intent: nao_possui_conta
+      - type: from_intent
+        value: true
+        intent: possui_conta
+      - type: from_intent
+        value: true
+        intent: nao_possui_conta
+
   nome:
     type: text
     mappings:
-    - type: from_entity
-      entity: nome
+      - type: from_entity
+        entity: nome
+
   turma:
     type: text
     mappings:
-    - type: from_entity
-      entity: turma
+      - type: from_entity
+        entity: turma
+
 
 forms:
   requerer_documento:
     required_slots:
-    - documento
-    - tipo_documento
+      - documento
+      - tipo_documento
+
   chegada_tardia:
     required_slots:
-    - nome
-    - turma
+      - nome
+      - turma
 
 session_config:
   session_expiration_time: 60

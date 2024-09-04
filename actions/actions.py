@@ -47,7 +47,7 @@ class ActionTratarEscolha(Action):
             dispatcher.utter_message(response="utter_chegada_tardia")
             # Lógica adicional para "Informar chegada tardia"
         elif '5' in escolha:
-            dispatcher.utter_message(response="utter_out_of_scope")
+            dispatcher.utter_message(response="utter_ask_documento")
             # Lógica adicional para "Outras opções"
         else:
             dispatcher.utter_message(response="utter_ask_rephrase")
