@@ -7,6 +7,7 @@ rules:
       - action: utter_menu_opcoes
       - action: action_listen
 
-  - rule: Escolha de Opção
+  - rule: Tratar Escolha de Opção
     steps:
+      - intent: escolha_opcao
       - action: action_tratar_escolha

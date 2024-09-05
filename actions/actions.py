@@ -32,23 +32,18 @@ class ActionTratarEscolha(Action):
             tracker: Tracker,
             domain: dict):
         
-        escolha = tracker.latest_message['text']
+        escolha = tracker.latest_message['text'].strip() 
         
-        if '1' in escolha:
+        if escolha == '1':
             dispatcher.utter_message(response="utter_localizacao_campus")
-            # Lógica adicional para "Informações sobre o campus"
-        elif '2' in escolha:
+        elif escolha == '2':
             dispatcher.utter_message(response="utter_requerer_documento")
-            # Lógica adicional para "Requerer documentos"
-        elif '3' in escolha:
+        elif escolha == '3':
             dispatcher.utter_message(response="utter_cancelar_matricula")
-            # Lógica adicional para "Cancelar matrícula"
-        elif '4' in escolha:
+        elif escolha == '4':
             dispatcher.utter_message(response="utter_chegada_tardia")
-            # Lógica adicional para "Informar chegada tardia"
-        elif '5' in escolha:
+        elif escolha == '5':
             dispatcher.utter_message(response="utter_ask_documento")
-            # Lógica adicional para "Outras opções"
         else:
             dispatcher.utter_message(response="utter_ask_rephrase")
         

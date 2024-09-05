@@ -7,6 +7,14 @@ nlu:
     - oie
     - e aí?
     - como vai?
+    
+- intent: escolha_opcao
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
 
 - intent: localizacao_campus
   examples: |
