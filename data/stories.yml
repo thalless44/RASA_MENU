@@ -13,10 +13,11 @@ stories:
   - action: action_listen
   - intent: localizacao_campus
   - action: utter_localizacao_campus
+  - action: utter_como_ajudar_mais
+  - action: action_listen
 
 - story: Escolha de Requerer Documentos
   steps:
-  - action: utter_menu_opcoes
   - action: action_listen
   - intent: requerer_documento
   - action: utter_requerer_documento
@@ -25,7 +26,6 @@ stories:
 
 - story: Escolha de Cancelar Matrícula
   steps:
-  - action: utter_menu_opcoes
   - action: action_listen
   - intent: cancelar_matricula
   - action: utter_cancelar_matricula

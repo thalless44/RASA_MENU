@@ -13,6 +13,8 @@ intents:
   - out_of_scope
   - requerer_documento
   - tipo_documento
+  - saudar
+  - escolha_opcao
 
 entities:
   - tipo_documento
@@ -70,6 +72,11 @@ responses:
   utter_ask_tipo_documento:
     - text: Você pode obter seu documento digitalmente ou fisicamente. Qual você prefere?
 
+  utter_como_ajudar_mais:
+    - text: Posso lhe ajudar com algo mais?
+    - text: 1 - Sim
+    - text: 2 - Não
+
 slots:
   documento:
     type: categorical
@@ -89,15 +96,6 @@ slots:
       - type: from_entity
         entity: tipo_documento
 
-  possui_conta:
-    type: bool
-    mappings:
-      - type: from_intent
-        value: true
-        intent: possui_conta
-      - type: from_intent
-        value: true
-        intent: nao_possui_conta
 
   nome:
     type: text

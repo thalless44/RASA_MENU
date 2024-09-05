@@ -48,8 +48,24 @@ class ActionTratarEscolha(Action):
             dispatcher.utter_message(response="utter_ask_rephrase")
         
         return []
+    
 
+class ActionTratarEscolha(Action):
+    def name(self):
+        return "action_escolhas"
 
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: dict):
+        
+        escolha = tracker.latest_message['text'].strip() 
+        
+        if escolha == '1':
+            dispatcher.utter_message(response="utter_menu_opcoes")
+        else:
+            dispatcher.utter_message(response="/stop")
+        
+        return []
 
 class ActionProcessarHorarioCampus(Action):
     def name(self) -> Text:
