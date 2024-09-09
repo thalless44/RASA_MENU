@@ -33,14 +33,18 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: |
-        Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:
-        1. **Informações sobre o campus** 
-        2. **Requerer documentos** 
-        3. **Cancelar matrícula** 
-        4. **Informar chegada tardia** 
-        5. **Outras opções**
-        Escolha uma opção digitando o número correspondente.
+    - text: 'Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:'
+      buttons:
+      - title: "Informações sobre o campus" 
+        payload:  "localizacao_campus" 
+      - title:  "Requerer documentos"
+        payload: "requerer_documento" 
+      - title: "Cancelar matrícula"
+        payload: "cancelar_matricula" 
+      - title: "Chegada tardia"
+        payload: "chegada_tardia"
+      - title: "Documento"
+        payload: "utter_ask_documento"
 
   utter_localizacao_campus:
     - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.

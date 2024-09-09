@@ -45,7 +45,7 @@ class ActionTratarEscolha(Action):
         elif escolha == '5':
             dispatcher.utter_message(response="utter_ask_documento")
         else:
-            dispatcher.utter_message(response="utter_ask_rephrase")
+            dispatcher.utter_message(response="action_tratar_escolha")
         
         return []
     
