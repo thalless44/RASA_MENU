@@ -1,4 +1,5 @@
 version: "3.1"
+
 nlu:
 - intent: saudar
   examples: |
@@ -7,7 +8,7 @@ nlu:
     - oie
     - e aí?
     - como vai?
-    
+
 - intent: escolha_opcao
   examples: |
     - 1
@@ -28,16 +29,15 @@ nlu:
 - intent: requerer_documento
   examples: |
     - [atestado de frequência](documento)
-    - [atestado de matricula](documento)
-    - preciso do [atestado de matricula](documento) [digital](tipo_documento)
-    - quero um [atestado de matricula](documento) [digital](tipo_documento)
+    - [atestado de matrícula](documento)
+    - preciso do [atestado de matrícula](documento) [digital](tipo_documento)
+    - quero um [atestado de matrícula](documento) [digital](tipo_documento)
     - como consigo o [atestado de frequência](documento) [digital](tipo_documento)?
     - quero um comprovante que estou matriculado no IFSC
     - preciso de um documento
     - quero um documento
-    - quero um [atestado de matricula](documento)
+    - quero um [atestado de matrícula](documento)
     - preciso de um [atestado de frequência](documento)
-    - Preciso de um [atestado de matrícula](documento)
 
 - intent: informar_requerer_documento
   examples: |
@@ -46,12 +46,12 @@ nlu:
     - [impresso](tipo_documento)
     - preciso de um [atestado de frequência](documento)
     - Preciso de um [atestado de matrícula](documento)
+
 - intent: cancelar_matricula
   examples: |
     - quero cancelar minha matrícula
-    - como cancelo matricula
+    - como cancelo matrícula
     - quero trancar o curso
-    - quero trancar a matricula
     - quero trancar a matrícula
 
 - intent: out_of_scope
@@ -62,6 +62,7 @@ nlu:
     - Quero comprar um celular
     - Preciso de uma boia
     - Maçã
+
 - intent: chegada_tardia
   examples: |
     - cheguei atrasado
@@ -101,72 +102,121 @@ nlu:
     - [Química 2](turma)
     - [Química 6](turma)
 
-- intent: HORÁRIO DE FUNCIONAMENTO
+
+
+- intent: /back
+  examples: |
+    - quero voltar
+
+- intent: horario_de_funcionamento
+  examples: |
+    - Qual é o horário de funcionamento?
+
+- intent: aula_ucx_sala_lab
+  examples: |
+    - Qual é o horário da aula da UCx?
+    - Onde fica a sala/lab?
+
+- intent: monitoria
+  examples: |
+    - Quando é a monitoria?
+    - Onde posso encontrar a monitoria?
+
+- intent: nucleo_pedagogico
+  examples: |
+    - Onde fica o núcleo pedagógico?
+    - O que é o núcleo pedagógico?
+
+- intent: atendimento_extraclasse
+  examples: |
+    - Como agendar atendimento extraclasse?
+    - Onde é o atendimento extraclasse?
+
+- intent: secretaria
+  examples: |
+    - Onde fica a secretaria?
+    - Qual o horário de funcionamento da secretaria?
+
+- intent: cantina
+  examples: |
+    - Onde fica a cantina?
+    - O que é servido na cantina?
+
+- intent: campus
+  examples: |
+    - Onde fica o campus?
+    - Qual o endereço do campus?
+
+- intent: biblioteca
+  examples: |
+    - Qual o horário da biblioteca?
+    - Onde está a biblioteca?
+#-------------------------------------------------------
+- intent: atividades_complementares
+  examples: |
+    - O que são atividades complementares?
+    - Como posso participar de atividades complementares?
+
+- intent: ch
   exemples: |
-  - HORÁRIO DE FUNCIONAMENTO
+    - quero ver a carga horaria
+    - o uqe é ch
 
-- intent: Aula UCx /Sala/Lab
+- intent: regulamento
   exemples: |
-  - Aula UCx /Sala/Lab
+    - quero saber sobre o regulamento
+    - qual e o regulamento
 
-- intent: Monitoria
+- intent: definição
   exemples: |
-  - Monitoria
+    - qual a definições de atividades complementares?
+    - o qe é definição 
 
-- intent: Núcleo pedagógico
+- intent: grupos_de_atividade
   exemples: |
-  - Núcleo pedagógico
+    - quais são os grupos de atividades
+    - querom saber osgrupos de atividades complementares
 
-- intent: Atendimento extraclasse
+- intent: descrição_de_cada_grupo 
   exemples: |
-  - Atendimento extraclasse 
+    - qual a descrição de cada grupos de atividades complementares
+    - descrição de cada grupo
 
-- intent: Secretaria
-  exemples: |
-  - Secretaria Cantina
 
-- intent: Cantina
-  exemples: |
-  - Cantina   
 
-- intent:  Câmpus
-  exemples: |
-  -  Câmpus 
-
-- intent: Biblioteca
-  exemples: |
-  -  Biblioteca
+#----------------------------------------------------------------------
+- intent: curso
+  examples: |
+    - Qual é o curso oferecido?
+    - Como se inscrever no curso?
 
 
 
 
 
 
+#----------------------------------------------------------------------
+- intent: calendario_academico
+  examples: |
+    - Qual é o calendário acadêmico?
+    - Onde encontro o calendário acadêmico?
 
-- intent: ATIVIDADES COMPLEMENTARES
-  exemples: |
-  -  ATIVIDADES COMPLEMENTARES
+- intent: rdp
+  examples: |
+    - O que é o RDP?
+    - Como funciona o RDP?
 
-- intent: CURSO
-  exemples: |
-  -   CURSO
+- intent: estagio
+  examples: |
+    - Como fazer estágio?
+    - O que é necessário para o estágio?
 
-- intent: CALENDÁRIO ACADÊMICO 
-  exemples: |
-  -  CALENDÁRIO ACADÊMICO 
+- intent: assistencia_estudantil
+  examples: |
+    - O que é assistência estudantil?
+    - Como posso solicitar assistência estudantil?
 
-- intent: RDP
-  exemples: |
-  -  RDP
-
-- intent: ESTÁGIO
-  exemples: |
-  -  ESTÁGIO
-
-- intent: ASSISTÊNCIA ESTUDANTIL
-  exemples: |
-  -  ASSISTÊNCIA ESTUDANTIL
-
-- intent: GERAL
-  exemples: |
-  -  GERAL
+- intent: geral
+  examples: |
+    - Tenho uma dúvida geral.
+    - Preciso de informações gerais.

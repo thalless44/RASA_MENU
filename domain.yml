@@ -15,6 +15,30 @@ intents:
   - tipo_documento
   - saudar
   - escolha_opcao
+  - /back
+  #novas intents do documento
+  - HORÁRIO DE FUNCIONAMENTO
+  - Aula UCx /Sala/Lab
+  - Monitoria
+  - Núcleo pedagógico
+  - Atendimento extraclasse
+  - Secretaria Cantina
+  - Cantina 
+  - Câmpus
+  - Biblioteca
+  - atividades_complementares
+  - ch
+  - regulamento
+  - definiçãoi
+  - grupos_de_atividade
+  - descrição_de_cada_grupo
+  - curso
+  - calendario_academico
+  - rpd
+  - estagio
+  - assistencia_estudantil
+  - geral
+
 
 entities:
   - tipo_documento
@@ -30,28 +54,9 @@ actions:
   - validate_chegada_tardia_form
   - validate_requerer_documento_form
   - action_tratar_escolha
+  - action_back
 
 responses:
-  utter_menu_opcoes:
-    - text: 'Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:'
-      buttons:
-      - title: "HORÁRIO DE FUNCIONAMENTO" 
-        payload:  "HORÁRIO DE FUNCIONAMENTO" 
-      - title:  "ATIVIDADES COMPLEMENTARES"
-        payload: "ATIVIDADES COMPLEMENTARES" 
-      - title: "CURSO"
-        payload: "CURSO" 
-      - title: "CALENDÁRIO ACADÊMICO"
-        payload: "CALENDÁRIO ACADÊMICO"
-      - title: "RDP"
-        payload: "RDP"
-      - title: "ESTÁGIO"
-        payload: "ESTÁGIO"
-      - title: "ASSISTÊNCIA ESTUDANTIL"
-        payload: "ASSISTÊNCIA ESTUDANTIL"
-      - title: "GERAL"
-        payload: "GERAL"
-
   utter_localizacao_campus:
     - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
 
@@ -86,6 +91,89 @@ responses:
     - text: Posso lhe ajudar com algo mais?
     - text: 1 - Sim
     - text: 2 - Não
+# adicionando respostas para as inteçoes
+  utter_menu_opcoes:
+    - text: 'Olá! Sou o chatbot do IFSC Câmpus Gaspar. Aqui estão as opções que você pode escolher:'
+      buttons:
+      - title: "HORÁRIO DE FUNCIONAMENTO" 
+        payload:  "HORÁRIO DE FUNCIONAMENTO" 
+
+      - title:  "ATIVIDADES COMPLEMENTARES"
+        payload: "ATIVIDADES COMPLEMENTARES" 
+
+      - title: "CURSO"
+        payload: "CURSO" 
+
+      - title: "CALENDÁRIO ACADÊMICO"
+        payload: "CALENDÁRIO ACADÊMICO"
+
+      - title: "RDP"
+        payload: "RDP"
+
+      - title: "ESTÁGIO"
+        payload: "ESTÁGIO"
+
+      - title: "ASSISTÊNCIA ESTUDANTIL"
+        payload: "ASSISTÊNCIA ESTUDANTIL"
+
+      - title: "GERAL"
+        payload: "GERAL"
+
+  utter_atividades_complementares:
+    - text: 'Tudo bem, o que você deseja saber sobre atividades comlemententares?'
+      buttons:
+      - title: "CARGA HORARIA" 
+        payload:  "CH" 
+
+      - title:  "Regulamento"
+        payload: "Regulamento" 
+
+      - title: "Definição"
+        payload: "Definição" 
+
+      - title: "Grupos de atividade"
+        payload: "Grupos de atividade"
+
+      - title: "Descrição de cada grupo"
+        payload: "Descrição de cada grupo"
+
+      - title: "volta ao menu anterior"
+        payload: "/back"
+
+
+
+utter_horario_funcionamento:
+    - text: 'Tudo bem, qual horario vc quer saber?'
+      buttons:
+      - title: "Aula UCx /Sala/Lab" 
+        payload:  "Aula UCx /Sala/Lab" 
+
+      - title:  "Monitoria"
+        payload: "Monitoria" 
+
+      - title: "Núcleo pedagógico"
+        payload: "Núcleo pedagógico" 
+
+      - title: "Atendimento extraclasse"
+        payload: "Atendimento extraclasse"
+
+      - title: "Secretaria"
+        payload: "Secretaria"
+
+      - title: "Cantina"
+        payload: "Cantina"
+
+      - title: "Câmpus"
+        payload: "Câmpus"
+        
+      - title: "Biblioteca"
+        payload: "Biblioteca"
+
+      - title: "volta ao menu anterior"
+        payload: "/back"
+
+
+
 
 slots:
   documento:

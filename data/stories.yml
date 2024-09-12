@@ -6,40 +6,17 @@ stories:
   steps:
   - intent: saudar
   - action: utter_menu_opcoes
-  - action: action_listen
 
-- story: Escolha de Informações sobre o Campus
+- story: HORÁRIO DE FUNCIONAMENTO
   steps:
-  - action: action_listen
-  - intent: localizacao_campus
-  - action: utter_localizacao_campus
-  - action: utter_como_ajudar_mais
-  - action: action_listen
-
-- story: Escolha de Requerer Documentos
-  steps:
-  - action: action_listen
-  - intent: requerer_documento
-  - action: utter_requerer_documento
-  - action: requerer_documento
-  - active_loop: requerer_documento
-
-- story: Escolha de Cancelar Matrícula
-  steps:
-  - action: action_listen
-  - intent: cancelar_matricula
-  - action: utter_cancelar_matricula
-  - action: utter_cancelar_matricula_passos_1
-  - action: utter_cancelar_matricula_passos_2
-  - action: utter_cancelar_matricula_passos_3
-
-- story: Escolha de Informar Chegada Tardia
-  steps:
+  - intent: saudar
   - action: utter_menu_opcoes
-  - action: action_listen
-  - intent: chegada_tardia
-  - action: utter_chegada_tardia
-  - action: chegada_tardia
-  - active_loop: chegada_tardia
-  - action: action_enviar_chegada_tardia
+  - intent: horario_funcionamento
+  - action: utter_horario_funcionamento
 
+- story: ATIVIDADES COMPLEMENTARES
+  steps:
+  - intent: saudar
+  - action: utter_menu_opcoes
+  - intent: atividades_complementares
+  - action: utter_atividades_complementares

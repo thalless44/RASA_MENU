@@ -13,3 +13,7 @@ rules:
       - action: action_tratar_escolha
 
 
+  - rule: retornar a opção anterior 
+    steps:
+      - intent: /back
+      - action: action_back

@@ -33,6 +33,15 @@ pipeline:
     threshold: 0.3
     ambiguity_threshold: 0.1
 
+
+
+  - name: "RulePolicy"
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: action_default_fallback
+    enable_fallback_prediction: true
+    restrict_rules: true
+    check_for_contradictions: true
+
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
