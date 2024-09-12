@@ -101,3 +101,72 @@ nlu:
     - [Química 2](turma)
     - [Química 6](turma)
 
+- intent: HORÁRIO DE FUNCIONAMENTO
+  exemples: |
+  - HORÁRIO DE FUNCIONAMENTO
+
+- intent: Aula UCx /Sala/Lab
+  exemples: |
+  - Aula UCx /Sala/Lab
+
+- intent: Monitoria
+  exemples: |
+  - Monitoria
+
+- intent: Núcleo pedagógico
+  exemples: |
+  - Núcleo pedagógico
+
+- intent: Atendimento extraclasse
+  exemples: |
+  - Atendimento extraclasse 
+
+- intent: Secretaria
+  exemples: |
+  - Secretaria Cantina
+
+- intent: Cantina
+  exemples: |
+  - Cantina   
+
+- intent:  Câmpus
+  exemples: |
+  -  Câmpus 
+
+- intent: Biblioteca
+  exemples: |
+  -  Biblioteca
+
+
+
+
+
+
+
+- intent: ATIVIDADES COMPLEMENTARES
+  exemples: |
+  -  ATIVIDADES COMPLEMENTARES
+
+- intent: CURSO
+  exemples: |
+  -   CURSO
+
+- intent: CALENDÁRIO ACADÊMICO 
+  exemples: |
+  -  CALENDÁRIO ACADÊMICO 
+
+- intent: RDP
+  exemples: |
+  -  RDP
+
+- intent: ESTÁGIO
+  exemples: |
+  -  ESTÁGIO
+
+- intent: ASSISTÊNCIA ESTUDANTIL
+  exemples: |
+  -  ASSISTÊNCIA ESTUDANTIL
+
+- intent: GERAL
+  exemples: |
+  -  GERAL
