@@ -1,22 +1,54 @@
 version: "3.1"
 
 stories:
-
-- story: Saudação e Menu de Opções
-  steps:
-  - intent: saudar
-  - action: utter_menu_opcoes
-
-- story: HORÁRIO DE FUNCIONAMENTO
-  steps:
-  - intent: saudar
-  - action: utter_menu_opcoes
-  - intent: horario_funcionamento
-  - action: utter_horario_funcionamento
-
-- story: ATIVIDADES COMPLEMENTARES
-  steps:
-  - intent: saudar
-  - action: utter_menu_opcoes
-  - intent: atividades_complementares
-  - action: utter_atividades_complementares
+  - story: Saudação
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+  
+  
+  - story: Não ajudar
+    steps:
+    - action: utter_menu_opcoes
+    - intent: nao_ajudar
+    - action: utter_nao_ajudar
+  
+  - story: Perguntar localização do campus
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_ifsc
+    - action: utter_menu_info_ifsc
+    - intent: localizacao_campus
+    - action: utter_localizacao_campus
+    - action: utter_como_ajudar_mais
+  
+  
+  - story: Perguntar horários do campus
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_ifsc
+    - action: utter_menu_info_ifsc
+    - intent: horario_campus
+    - action: action_processar_horario_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: Cancelar matrícula
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: cancelar_matricula
+    - action: utter_cancelar_matricula
+    - action: utter_cancelar_matricula_passos_1
+    - action: utter_cancelar_matricula_passos_2
+    - action: utter_cancelar_matricula_passos_3
+    - action: utter_como_ajudar_mais
+    - intent: out_of_scope
+    - action: utter_default

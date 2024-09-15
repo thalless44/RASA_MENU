@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: saudar
   examples: |
@@ -8,14 +7,22 @@ nlu:
     - oie
     - e aí?
     - como vai?
-
-- intent: escolha_opcao
+- intent: testando
   examples: |
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
+    - testando
+    - teste
+    - teste teste
+    - teste 1 2 3
+    - teste 123
+- intent: inf_ifsc
+  examples: |
+    - informações do ifsc
+    - quero saber sobre o ifsc
+- intent: inf_doc
+  examples: |
+    - quero saber sobre documentos 
+    - documentos
+
 
 - intent: localizacao_campus
   examples: |
@@ -25,20 +32,44 @@ nlu:
     - cadê o IFSC Campus Gaspar?
     - onde fica o IFSC Câmpus Gaspar?
     - onde achar o IFSC?
-
+- intent: site_campus
+  examples: |
+    - qual o site do campus?
+    - qual o site do IFSC?
+    - qual o site do IFSC Gaspar?
+    - qual o site do IFSC Campus Gaspar?
+    - qual o site do IFSC Câmpus Gaspar?
+- intent: contar_piada
+  examples: |
+    - conte uma piada
+    - conte uma piada para mim
+    - conte uma piada por favor
+    - inventa uma piada
+    - piada
+- intent: horario_campus
+  examples: |
+    - qual o horário de funcionamento do campus?
+    - qual o horário de funcionamento do IFSC?
+    - qual o horário de funcionamento do IFSC Gaspar?
+    - qual o horário de funcionamento do IFSC Campus Gaspar?
+    - qual o horário de funcionamento do IFSC Câmpus Gaspar?
+    - o campus está aberto?
+    - quando abre o campus?
+    - quando fecha o campus?
+    - qual o horário do campus?
 - intent: requerer_documento
   examples: |
     - [atestado de frequência](documento)
-    - [atestado de matrícula](documento)
-    - preciso do [atestado de matrícula](documento) [digital](tipo_documento)
-    - quero um [atestado de matrícula](documento) [digital](tipo_documento)
+    - [atestado de matricula](documento)
+    - preciso do [atestado de matricula](documento) [digital](tipo_documento)
+    - quero um [atestado de matricula](documento) [digital](tipo_documento)
     - como consigo o [atestado de frequência](documento) [digital](tipo_documento)?
     - quero um comprovante que estou matriculado no IFSC
     - preciso de um documento
     - quero um documento
-    - quero um [atestado de matrícula](documento)
+    - quero um [atestado de matricula](documento)
     - preciso de um [atestado de frequência](documento)
-
+    - Preciso de um [atestado de matrícula](documento)
 - intent: informar_requerer_documento
   examples: |
     - [digital](tipo_documento)
@@ -46,14 +77,28 @@ nlu:
     - [impresso](tipo_documento)
     - preciso de um [atestado de frequência](documento)
     - Preciso de um [atestado de matrícula](documento)
-
 - intent: cancelar_matricula
   examples: |
     - quero cancelar minha matrícula
-    - como cancelo matrícula
+    - como cancelo matricula
     - quero trancar o curso
+    - quero trancar a matricula
     - quero trancar a matrícula
-
+- intent: possui_conta
+  examples: |
+    - sim
+    - sim, tenho conta no SIGAA
+    - possuo conta no SIGAA
+    - possuo conta
+    - tenho cadastro
+    - Sim
+- intent: nao_possui_conta
+  examples: |
+    - não
+    - não tenho conta
+    - ainda nao tenho conta
+    - não possuo conta
+    - não tenho cadastro
 - intent: out_of_scope
   examples: |
     - Quero pedir comida
@@ -62,7 +107,6 @@ nlu:
     - Quero comprar um celular
     - Preciso de uma boia
     - Maçã
-
 - intent: chegada_tardia
   examples: |
     - cheguei atrasado
@@ -73,7 +117,12 @@ nlu:
     - cheguei atrasada e preciso do papel para justificar
     - cheguei atrasado e sou do [I6](turma)
     - cheguei atrasado e me chamo [João Gabriel](nome)
-
+- intent: nao_ajudar
+  examples: |
+    - não precisa
+    - não obrigado
+    - tudo certo por aqui
+    - não quero nada
 - intent: informar_chegada_tardia
   examples: |
     - meu nome é [João Gabriel](nome)
@@ -101,122 +150,35 @@ nlu:
     - [Química 1](turma)
     - [Química 2](turma)
     - [Química 6](turma)
-
-
-
-- intent: /back
+- synonym: atestado_matricula
   examples: |
-    - quero voltar
-
-- intent: horario_de_funcionamento
+    - atestado de matricula
+    - atestado de matrícula
+    - documento de matricula
+    - documento de matrícula
+    - certidao de matricula
+    - certidao de matrícula
+    - matricula
+    - matrícula
+- synonym: atestado_frequencia
   examples: |
-    - Qual é o horário de funcionamento?
-
-- intent: aula_ucx_sala_lab
+    - atestado de frequencia
+    - atestado de frequência
+    - documento de frequência
+    - certidao de frequência
+    - frequência
+    - frequencia
+- synonym: digital
   examples: |
-    - Qual é o horário da aula da UCx?
-    - Onde fica a sala/lab?
-
-- intent: monitoria
+    - digitalmente
+    - online
+- synonym: fisico
   examples: |
-    - Quando é a monitoria?
-    - Onde posso encontrar a monitoria?
-
-- intent: nucleo_pedagogico
-  examples: |
-    - Onde fica o núcleo pedagógico?
-    - O que é o núcleo pedagógico?
-
-- intent: atendimento_extraclasse
-  examples: |
-    - Como agendar atendimento extraclasse?
-    - Onde é o atendimento extraclasse?
-
-- intent: secretaria
-  examples: |
-    - Onde fica a secretaria?
-    - Qual o horário de funcionamento da secretaria?
-
-- intent: cantina
-  examples: |
-    - Onde fica a cantina?
-    - O que é servido na cantina?
-
-- intent: campus
-  examples: |
-    - Onde fica o campus?
-    - Qual o endereço do campus?
-
-- intent: biblioteca
-  examples: |
-    - Qual o horário da biblioteca?
-    - Onde está a biblioteca?
-#-------------------------------------------------------
-- intent: atividades_complementares
-  examples: |
-    - O que são atividades complementares?
-    - Como posso participar de atividades complementares?
-
-- intent: ch
-  exemples: |
-    - quero ver a carga horaria
-    - o uqe é ch
-
-- intent: regulamento
-  exemples: |
-    - quero saber sobre o regulamento
-    - qual e o regulamento
-
-- intent: definição
-  exemples: |
-    - qual a definições de atividades complementares?
-    - o qe é definição 
-
-- intent: grupos_de_atividade
-  exemples: |
-    - quais são os grupos de atividades
-    - querom saber osgrupos de atividades complementares
-
-- intent: descrição_de_cada_grupo 
-  exemples: |
-    - qual a descrição de cada grupos de atividades complementares
-    - descrição de cada grupo
-
-
-
-#----------------------------------------------------------------------
-- intent: curso
-  examples: |
-    - Qual é o curso oferecido?
-    - Como se inscrever no curso?
-
-
-
-
-
-
-#----------------------------------------------------------------------
-- intent: calendario_academico
-  examples: |
-    - Qual é o calendário acadêmico?
-    - Onde encontro o calendário acadêmico?
-
-- intent: rdp
-  examples: |
-    - O que é o RDP?
-    - Como funciona o RDP?
-
-- intent: estagio
-  examples: |
-    - Como fazer estágio?
-    - O que é necessário para o estágio?
-
-- intent: assistencia_estudantil
-  examples: |
-    - O que é assistência estudantil?
-    - Como posso solicitar assistência estudantil?
-
-- intent: geral
-  examples: |
-    - Tenho uma dúvida geral.
-    - Preciso de informações gerais.
+    - em papel
+    - fisico
+    - fisica
+    - físico
+    - física
+    - fisicamente
+    - impressa
+    - impresso
