@@ -23,13 +23,19 @@ stories:
     - intent: localizacao_campus
     - action: utter_localizacao_campus
     - action: utter_como_ajudar_mais
+
+  - story: botão local do ifsc
+    steps:
+    - action: utter_menu_opcoes
+    - intent: inf_ifsc
+    - action: utter_menu_info_ifsc
+    - intent: localizacao_campus
+    - action: utter_localizacao_campus
+    - action: utter_como_ajudar_mais
   
   
   - story: Perguntar horários do campus
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_ifsc
     - action: utter_menu_info_ifsc
     - intent: horario_campus
@@ -38,9 +44,6 @@ stories:
   
   - story: Cancelar matrícula
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: cancelar_matricula
@@ -54,9 +57,6 @@ stories:
 
   - story: Site do ifsc
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_ifsc
     - action: utter_menu_info_ifsc
     - intent: site_campus
@@ -65,9 +65,6 @@ stories:
   
   - story: atestado de matricula fisico
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: atestado_matricula
@@ -79,9 +76,6 @@ stories:
 
   - story: atestado de matricula digital
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: atestado_matricula
@@ -90,11 +84,23 @@ stories:
     - action: utter_ask_digital
     - action: utter_como_ajudar_mais
 
+  - story: informações sobre documentos
+    steps:
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: atestado_matricula
+    - action: utter_menu_tipo_documento
+    
+
+  - story: botão digital
+    steps:
+    - intent: digital
+    - action: utter_ask_digital
+    - action: utter_como_ajudar_mais
+
   - story: atestado de frequecia fisico
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: atestado_frequencia
@@ -103,11 +109,15 @@ stories:
     - action: utter_ask_fisico
     - action: utter_como_ajudar_mais
 
+  - story: botão fisico
+  
+    steps:
+    - intent: fisico
+    - action: utter_ask_fisico
+    - action: utter_como_ajudar_mais
+
   - story: atestado de frequecia fisico
     steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: atestado_frequencia
@@ -115,3 +125,9 @@ stories:
     - intent: digital
     - action: utter_ask_digital
     - action: utter_como_ajudar_mais
+
+  - story: botão não ajudar mais
+    steps:
+    - action: utter_como_ajudar_mais
+    - intent: nao_ajudar
+    - action: utter_nao_ajudar

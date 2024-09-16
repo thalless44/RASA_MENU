@@ -58,9 +58,6 @@ responses:
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
-
-      - title: "Informar chegada tardia"
-        payload: "/chegada_tardia" 
       
       - title: "Atestado de matricula"
         payload: "/atestado_matricula" 
@@ -83,20 +80,8 @@ responses:
       
 
 
-
-
-
-
-
-
-
-
-
-
   utter_saudar:
   - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar.
-  - text: Oi! Sou o chatbot do IFSC Câmpus Gaspar.
-  - text: E aí? Eu sou o chatbot do IFSC Câmpus Gaspar.
   utter_localizacao_campus:
   - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
   utter_site_campus:
@@ -111,10 +96,10 @@ responses:
   - text: 'deseja voltar ao menu inicial?'
     buttons:
     - title: "Sim"
-      payload: "saudar"
+      payload: "/saudar"
 
     - title: "Não"
-      payload: "nao_ajudar"
+      payload: "/nao_ajudar"
 
   utter_nao_ajudar:
   - text: Tudo bem. Estarei aqui caso você precise de algo.
@@ -152,10 +137,10 @@ responses:
   - text: Você pode obter seu documento?
     buttons: 
     - title: 'Digital'
-      payload: "digital"
+      payload: "/digital"
     
     - title: 'Fisico'
-      payload: "fisico"
+      payload: "/fisico"
 
   utter_ask_possui_conta:
   - text: Você já possui uma conta no SIGAA?

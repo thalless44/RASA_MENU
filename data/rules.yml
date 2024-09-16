@@ -9,30 +9,6 @@ rules:
   - action: utter_menu_opcoes
 
 
-
-- rule: Pedir para o usuário refrasear se a confiança for baixa
-  steps:
-  - intent: nlu_fallback
-  - action: utter_ask_rephrase
-
-- rule: Ativar requerer documento
-  steps:
-  - intent: requerer_documento
-  - action: utter_requerer_documento
-  - action: requerer_documento
-  - active_loop: requerer_documento
-
-- rule: Enviar requerer documento
-  condition:
-  - active_loop: requerer_documento
-  steps:
-  - action: requerer_documento
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_enviar_requerer_documento
-  - action: utter_como_ajudar_mais
-
 - rule: Ativar chegada tardia
   steps:
   - intent: chegada_tardia
