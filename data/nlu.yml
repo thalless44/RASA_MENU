@@ -84,6 +84,7 @@ nlu:
     - quero trancar o curso
     - quero trancar a matricula
     - quero trancar a matrícula
+    - Cancelar matricula
 - intent: possui_conta
   examples: |
     - sim
@@ -117,12 +118,13 @@ nlu:
     - cheguei atrasada e preciso do papel para justificar
     - cheguei atrasado e sou do [I6](turma)
     - cheguei atrasado e me chamo [João Gabriel](nome)
+    - Informar chegada tardia
 - intent: nao_ajudar
   examples: |
     - não precisa
     - não obrigado
     - tudo certo por aqui
-    - não quero nada
+    - Não 
 - intent: informar_chegada_tardia
   examples: |
     - meu nome é [João Gabriel](nome)
@@ -150,17 +152,17 @@ nlu:
     - [Química 1](turma)
     - [Química 2](turma)
     - [Química 6](turma)
-- synonym: atestado_matricula
+- intent: atestado_matricula
   examples: |
     - atestado de matricula
-    - atestado de matrícula
+    - Atestado de matrícula
     - documento de matricula
     - documento de matrícula
     - certidao de matricula
     - certidao de matrícula
     - matricula
     - matrícula
-- synonym: atestado_frequencia
+- intent: atestado_frequencia
   examples: |
     - atestado de frequencia
     - atestado de frequência
@@ -168,17 +170,17 @@ nlu:
     - certidao de frequência
     - frequência
     - frequencia
-- synonym: digital
+- intent: digital
   examples: |
     - digitalmente
     - online
-- synonym: fisico
+    - digital
+    - Digital
+- intent: fisico
   examples: |
     - em papel
     - fisico
     - fisica
     - físico
     - física
-    - fisicamente
-    - impressa
-    - impresso
+    - Fisico

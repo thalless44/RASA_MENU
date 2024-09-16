@@ -1,11 +1,14 @@
 version: '3.1'
 intents:
+- atestado_frequencia
 - atestado_matricula
 - atestado_matricula_digital
 - atestado_matricula_fisico
 - cancelar_matricula
 - chegada_tardia
 - documento
+- digital
+- fisico
 - horario_campus
 - informar_chegada_tardia
 - informar_requerer_documento
@@ -43,7 +46,7 @@ responses:
     - text: 'Aqui abaixo estão as opções que você pode escolher, como posso te ajudar?'
       buttons:
       - title: "DOCUMENTAÇÂO DO IFSC" 
-        payload:  "/utter_menu_documento" 
+        payload:  "/inf_doc" 
 
       - title:  "INFORMAÇÔES DO IFSC"
         payload: "/inf_ifsc" 
@@ -54,10 +57,16 @@ responses:
     - text: 'Aqui abaixo estão as opções sobre documentos como posso te ajudar?'
       buttons:
       - title: "Cancelar matricula" 
-        payload:  "/cancelar_matricula" 
+        payload: "/cancelar_matricula" 
 
-      - title:  "Informar chegada tardia"
+      - title: "Informar chegada tardia"
         payload: "/chegada_tardia" 
+      
+      - title: "Atestado de matricula"
+        payload: "/atestado_matricula" 
+
+      - title: "Atestado de frequencia"
+        payload: "/atestado_frequencia" 
 
 
   utter_menu_info_ifsc:
@@ -99,8 +108,14 @@ responses:
   - text: Em que posso ajudar?
   - text: O que posso fazer por você?
   utter_como_ajudar_mais:
-  - text: Há algo mais em que posso te ajudar?
-  - text: Posso lhe ajudar com algo mais?
+  - text: 'deseja voltar ao menu inicial?'
+    buttons:
+    - title: "Sim"
+      payload: "saudar"
+
+    - title: "Não"
+      payload: "nao_ajudar"
+
   utter_nao_ajudar:
   - text: Tudo bem. Estarei aqui caso você precise de algo.
   utter_possui_conta:
@@ -127,10 +142,21 @@ responses:
   - text: Qual a sua turma?
   utter_requerer_documento:
   - text: Posso ajudar com isso!
-  utter_ask_documento:
-  - text: Qual documento você precisa? (atestado de matrícula ou atestado de frequência)
-  utter_ask_tipo_documento:
-  - text: Você pode obter seu documento digitalmente ou fisicamente. Qual você prefere?
+  utter_ask_digital:
+  - text: Certo. Para emitir o seu documento a partir do SIGAA, siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
+
+  utter_ask_fisico:
+  - text: Beleza. Para receber o seu {documento} impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
+
+  utter_menu_tipo_documento:
+  - text: Você pode obter seu documento?
+    buttons: 
+    - title: 'Digital'
+      payload: "digital"
+    
+    - title: 'Fisico'
+      payload: "fisico"
+
   utter_ask_possui_conta:
   - text: Você já possui uma conta no SIGAA?
   utter_contar_piada:

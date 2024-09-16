@@ -10,7 +10,6 @@ stories:
   
   - story: Não ajudar
     steps:
-    - action: utter_menu_opcoes
     - intent: nao_ajudar
     - action: utter_nao_ajudar
   
@@ -52,3 +51,67 @@ stories:
     - action: utter_como_ajudar_mais
     - intent: out_of_scope
     - action: utter_default
+
+  - story: Site do ifsc
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_ifsc
+    - action: utter_menu_info_ifsc
+    - intent: site_campus
+    - action: utter_site_campus
+    - action: utter_como_ajudar_mais
+  
+  - story: atestado de matricula fisico
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: atestado_matricula
+    - action: utter_menu_tipo_documento
+    - intent: fisico
+    - action: utter_ask_fisico
+    - action: utter_como_ajudar_mais
+    
+
+  - story: atestado de matricula digital
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: atestado_matricula
+    - action: utter_menu_tipo_documento
+    - intent: digital
+    - action: utter_ask_digital
+    - action: utter_como_ajudar_mais
+
+  - story: atestado de frequecia fisico
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: atestado_frequencia
+    - action: utter_menu_tipo_documento
+    - intent: fisico
+    - action: utter_ask_fisico
+    - action: utter_como_ajudar_mais
+
+  - story: atestado de frequecia fisico
+    steps:
+    - intent: saudar
+    - action: utter_saudar
+    - action: utter_menu_opcoes
+    - intent: inf_doc
+    - action: utter_menu_documento
+    - intent: atestado_frequencia
+    - action: utter_menu_tipo_documento
+    - intent: digital
+    - action: utter_ask_digital
+    - action: utter_como_ajudar_mais
