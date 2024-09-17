@@ -12,21 +12,9 @@ stories:
     steps:
     - intent: nao_ajudar
     - action: utter_nao_ajudar
-  
-  - story: Perguntar localização do campus
-    steps:
-    - intent: saudar
-    - action: utter_saudar
-    - action: utter_menu_opcoes
-    - intent: inf_ifsc
-    - action: utter_menu_info_ifsc
-    - intent: localizacao_campus
-    - action: utter_localizacao_campus
-    - action: utter_como_ajudar_mais
 
   - story: botão local do ifsc
     steps:
-    - action: utter_menu_opcoes
     - intent: inf_ifsc
     - action: utter_menu_info_ifsc
     - intent: localizacao_campus
@@ -110,7 +98,6 @@ stories:
     - action: utter_como_ajudar_mais
 
   - story: botão fisico
-  
     steps:
     - intent: fisico
     - action: utter_ask_fisico
@@ -131,3 +118,15 @@ stories:
     - action: utter_como_ajudar_mais
     - intent: nao_ajudar
     - action: utter_nao_ajudar
+
+  - story: chegada tardia
+    steps:
+    - intent: chegada_tardia
+    - action: utter_chegada_tardia
+    - action: chegada_tardia
+    - active_loop: chegada_tardia
+
+  - story: botão
+    steps:
+    - intent: inf_doc
+    - action: utter_menu_documento

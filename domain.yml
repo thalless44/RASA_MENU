@@ -66,6 +66,10 @@ responses:
         payload: "/atestado_frequencia" 
 
 
+      - title: "informar chegada tardia"
+        payload: "/chegada_tardia"
+
+
   utter_menu_info_ifsc:
     - text: 'Aqui abaixo estão as opções sobre informações do ifsc, como posso te ajudar?'
       buttons:
