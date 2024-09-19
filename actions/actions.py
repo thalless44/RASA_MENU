@@ -159,3 +159,20 @@ class ValidateChegadaTardiaForm(FormValidationAction):
         #     return {"turma": None}
 
         return {"turma": turma}
+
+
+class ActionClearSlot(Action):
+    def name(self) -> str:
+        return "action_clear_slot"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("nome", None)]
+    
+
+class ActionClearSlotturma(Action):
+    def name(self) -> str:
+        return "action_clear_slot_turma"
+    
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("turma", None)]
+

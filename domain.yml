@@ -25,6 +25,7 @@ intents:
 - testando
 - inf_ifsc
 - inf_doc
+- voltar_menu_anterior
 
 entities:
 - tipo_documento
@@ -39,6 +40,8 @@ actions:
 - action_enviar_chegada_tardia
 - validate_chegada_tardia_form
 - validate_requerer_documento_form
+- action_clear_slot
+- action_clear_slot_turma
 
 responses:
 
@@ -69,6 +72,9 @@ responses:
       - title: "informar chegada tardia"
         payload: "/chegada_tardia"
 
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior"
+
 
   utter_menu_info_ifsc:
     - text: 'Aqui abaixo estão as opções sobre informações do ifsc, como posso te ajudar?'
@@ -81,6 +87,9 @@ responses:
 
       - title:  "Site do IFSC"
         payload: "/site_campus" 
+
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior"
       
 
 
@@ -100,7 +109,7 @@ responses:
   - text: 'deseja voltar ao menu inicial?'
     buttons:
     - title: "Sim"
-      payload: "/saudar"
+      payload: "/voltar_menu_anterior"
 
     - title: "Não"
       payload: "/nao_ajudar"

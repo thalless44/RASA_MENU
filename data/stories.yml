@@ -5,8 +5,14 @@ stories:
     steps:
     - intent: saudar
     - action: utter_saudar
+    - action: action_clear_slot
+    - action: action_clear_slot_turma
     - action: utter_menu_opcoes
   
+  - story: voltar ao menu anterior
+    steps: 
+    - intent: voltar_menu_anterior
+    - action: utter_menu_opcoes
   
   - story: Não ajudar
     steps:
@@ -74,7 +80,6 @@ stories:
 
   - story: informações sobre documentos
     steps:
-    - action: utter_menu_opcoes
     - intent: inf_doc
     - action: utter_menu_documento
     - intent: atestado_matricula

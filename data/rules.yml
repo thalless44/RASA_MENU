@@ -6,6 +6,8 @@ rules:
   steps:
   - intent: saudar
   - action: utter_saudar
+  - action: action_clear_slot
+  - action: action_clear_slot_turma
   - action: utter_menu_opcoes
 
 - rule: Ativar chegada tardia

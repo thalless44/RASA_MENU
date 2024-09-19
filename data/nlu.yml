@@ -152,6 +152,15 @@ nlu:
     - [Química 1](turma)
     - [Química 2](turma)
     - [Química 6](turma)
+
+- intent: voltar_menu_anterior
+  examples: |
+    - voltar menu anterior
+    - voltar para o menu anterior
+    - voltar para o menu anterior
+    - voltar para o menu
+
+
 - intent: atestado_matricula
   examples: |
     - atestado de matricula
