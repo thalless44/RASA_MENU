@@ -12,6 +12,7 @@ stories:
   - story: voltar ao menu anterior
     steps: 
     - intent: voltar_menu_anterior
+    - action: utter_saudar
     - action: utter_menu_opcoes
   
   - story: Não ajudar

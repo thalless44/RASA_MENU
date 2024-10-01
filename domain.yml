@@ -46,18 +46,18 @@ actions:
 responses:
 
   utter_menu_opcoes:
-    - text: 'Aqui abaixo estão as opções que você pode escolher, como posso te ajudar?'
+    - text: 'Como posso ajudar você hoje.'
       buttons:
-      - title: "DOCUMENTAÇÂO DO IFSC" 
+      - title: "Documentação de alunos do IFSC" 
         payload:  "/inf_doc" 
 
-      - title:  "INFORMAÇÔES DO IFSC"
+      - title:  "Informações para estudantes do IFSC"
         payload: "/inf_ifsc" 
 
 
 
   utter_menu_documento:
-    - text: 'Aqui abaixo estão as opções sobre documentos como posso te ajudar?'
+    - text: 'Você selecionou (Documentação de Alunos) do IFSC. Estou aqui para ajudar! Que informações específicas você gostaria de saber sobre os documentos necessários?'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -77,12 +77,12 @@ responses:
 
 
   utter_menu_info_ifsc:
-    - text: 'Aqui abaixo estão as opções sobre informações do ifsc, como posso te ajudar?'
+    - text: 'Você escolheu (Informações para Estudantes do IFSC). Como posso ajudar ?'
       buttons:
       - title: "Localização do ifsc" 
         payload:  "/localizacao_campus" 
 
-      - title:  "Horario do campus"
+      - title:  "Horario que o campus está aberto"
         payload: "/horario_campus" 
 
       - title:  "Site do IFSC"
@@ -94,17 +94,13 @@ responses:
 
 
   utter_saudar:
-  - text: Olá! Sou o chatbot do IFSC Câmpus Gaspar.
+  - text: Olá! Sou seu assistente virtual do IFSC.
   utter_localizacao_campus:
   - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
   utter_site_campus:
   - text: O site do IFSC Câmpus Gaspar é https://www.ifsc.edu.br/web/campus-gaspar. Caso você queira saber mais sobre o IFSC, acesse https://www.ifsc.edu.br/.
   utter_testando:
   - text: Testando, 123... tem alguém aí?
-  utter_como_ajudar:
-  - text: Como posso te ajudar?
-  - text: Em que posso ajudar?
-  - text: O que posso fazer por você?
   utter_como_ajudar_mais:
   - text: 'deseja voltar ao menu inicial?'
     buttons:
