@@ -193,3 +193,38 @@ nlu:
     - físico
     - física
     - Fisico
+
+- intent: calendario_academico
+  examples: |
+    - calendario academicco 
+    - calendario escolar 
+    - calendario 
+- intent: periodo_validacao
+  examples: |
+    - periodo de validacao 
+    - validacao do periodo 
+    - validacao 
+- intent: periodo_cancelamento_materia
+  examples: |
+    - periodo de cancelamento de materia 
+    - cancelamento de materia 
+    - cancelamento
+- intent: periodo_formaturas
+  examples: |
+    - periodo de formaturas 
+    - formaturas 
+    - formatura
+
+- intent: periodo_tranca_matricula
+  examples: |
+    - periodo de trancamento de matricula 
+    - trancamento de matricula 
+    - trancamento
+
+- intent: periodo_recesso_escolar
+  examples: |
+    - periodo de recesso escolar 
+    - recesso escolar 
+    - recesso
+
+

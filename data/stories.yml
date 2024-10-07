@@ -136,3 +136,41 @@ stories:
     steps:
     - intent: inf_doc
     - action: utter_menu_documento
+
+
+  - story: período calendario academico
+    steps:
+    - intent: calendario_academico
+    - action: utter_menu_calendario_academico
+    - intent: periodo_validacao
+    - action: utter_periodo_validacao
+    - action: utter_validacao
+    - action: utter_como_ajudar_mais
+  
+  - story: período unidade curricular 
+    steps:
+    - intent: periodo_cancelamento_materia
+    - action: utter_periodo_cancelamento_materia
+    - action: utter_cancelamento_materia
+    - action: utter_como_ajudar_mais
+
+  - story: periodo de solicitaões de formaturas
+    steps:
+    - intent: periodo_formaturas
+    - action: utter_periodo_formaturas
+    - action: utter_formatura
+    - action: utter_como_ajudar_mais
+
+  - story: periodo de tracamento de matricula
+    steps:
+    - intent: periodo_tranca_matricula
+    - action: utter_periodo_tranca_matricula
+    - action: utter_tranca_matricula
+    - action: utter_como_ajudar_mais
+
+  - story: Recesso escolar
+    steps:
+    - intent: periodo_recesso_escolar
+    - action: utter_periodo_recesso_escolar
+    - action: utter_recesso
+    - action: utter_como_ajudar_mais

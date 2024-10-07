@@ -26,6 +26,12 @@ intents:
 - inf_ifsc
 - inf_doc
 - voltar_menu_anterior
+- calendario_academico
+- periodo_validacao
+- periodo_cancelamento_materia
+- periodo_formaturas
+- periodo_tranca_matricula
+- periodo_recesso_escolar
 
 entities:
 - tipo_documento
@@ -44,7 +50,6 @@ actions:
 - action_clear_slot_turma
 
 responses:
-
   utter_menu_opcoes:
     - text: 'Como posso ajudar você hoje.'
       buttons:
@@ -53,6 +58,10 @@ responses:
 
       - title:  "Informações para estudantes do IFSC"
         payload: "/inf_ifsc" 
+
+      - title: "Informações sobre datas e eventos CAC (Calendário Acadêmico)"
+        payload: "/calendario_academico" 
+        
 
 
 
@@ -68,21 +77,22 @@ responses:
       - title: "Atestado de frequencia"
         payload: "/atestado_frequencia" 
 
-
       - title: "informar chegada tardia"
         payload: "/chegada_tardia"
 
       - title: "Voltar ao menu anterior"
         payload: "/voltar_menu_anterior"
 
+    
+
 
   utter_menu_info_ifsc:
     - text: 'Você escolheu (Informações para Estudantes do IFSC). Como posso ajudar ?'
       buttons:
       - title: "Localização do ifsc" 
-        payload:  "/localizacao_campus" 
+        payload: "/localizacao_campus" 
 
-      - title:  "Horario que o campus está aberto"
+      - title: "Horario que o campus está aberto"
         payload: "/horario_campus" 
 
       - title:  "Site do IFSC"
@@ -90,9 +100,50 @@ responses:
 
       - title: "Voltar ao menu anterior"
         payload: "/voltar_menu_anterior"
+
+  utter_menu_calendario_academico:
+    - text: 'Beleza. voce escolheu Informações sobre datas e eventos CAC (Calendário Acadêmico). O que você deseja saber sobre informações a respeito do Calendário Acadêmico de 202X'
+      buttons:
+      - title: "Período de validação das matérias"
+        payload: "/periodo_validacao" 
+
+      - title: "Período de cancelamento de Unidade Curricular (matéria)"
+        payload: "/periodo_cancelamento_materia" 
+
+      - title: "Período de solicitação de formaturas"
+        payload: "/periodo_formaturas" 
+
+      - title: "Período de trancamento de matrícula"
+        payload: "/periodo_tranca_matricula" 
+ 
+      - title: "Recesso escolar (férias/feriados)"
+        payload: "/periodo_recesso_escolar"
+
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior"
       
+  utter_como_ajudar_mais:
+    - text: 'deseja voltar ao menu inicial?'
+      buttons:
+      - title: "Sim"
+        payload: "/voltar_menu_anterior"
+
+      - title: "Não"
+        payload: "/nao_ajudar"
 
 
+
+  utter_menu_tipo_documento:
+    - text: Você pode obter seu documento?
+      buttons: 
+      - title: 'Digital'
+        payload: "/digital"
+    
+      - title: 'Fisico'
+        payload: "/fisico"
+
+
+      
   utter_saudar:
   - text: Olá! Sou seu assistente virtual do IFSC.
   utter_localizacao_campus:
@@ -101,15 +152,6 @@ responses:
   - text: O site do IFSC Câmpus Gaspar é https://www.ifsc.edu.br/web/campus-gaspar. Caso você queira saber mais sobre o IFSC, acesse https://www.ifsc.edu.br/.
   utter_testando:
   - text: Testando, 123... tem alguém aí?
-  utter_como_ajudar_mais:
-  - text: 'deseja voltar ao menu inicial?'
-    buttons:
-    - title: "Sim"
-      payload: "/voltar_menu_anterior"
-
-    - title: "Não"
-      payload: "/nao_ajudar"
-
   utter_nao_ajudar:
   - text: Tudo bem. Estarei aqui caso você precise de algo.
   utter_possui_conta:
@@ -138,19 +180,8 @@ responses:
   - text: Posso ajudar com isso!
   utter_ask_digital:
   - text: Certo. Para emitir o seu documento a partir do SIGAA, siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
-
   utter_ask_fisico:
   - text: Beleza. Para receber o seu {documento} impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
-
-  utter_menu_tipo_documento:
-  - text: Você pode obter seu documento?
-    buttons: 
-    - title: 'Digital'
-      payload: "/digital"
-    
-    - title: 'Fisico'
-      payload: "/fisico"
-
   utter_ask_possui_conta:
   - text: Você já possui uma conta no SIGAA?
   utter_contar_piada:
@@ -163,7 +194,26 @@ responses:
   - text: "Beleza. Vou contar uma piada sobre potássio...\nKKKKKKKKKKKKK"
   - text: "Sabe o que um cromossomo falou para o outro?\nCromossomos felizes!"
   - text: "Um buraco negro é um tunel no fim da luz."
-
+  utter_periodo_validacao:
+  - text: "Para acessar o período de validação acesse o [Calendario Academico](https://docs.google.com/spreadsheets/d/1JJDk-8g6qawFSWGH9qkSTiaDSTfaCowrbppMuU5cJOE/edit?gid=325098504#gid=325098504)."
+  utter_validacao: 
+  - text: "Para  validar a(s) matéria(s), fale com seu cordenador de curso."
+  utter_periodo_cancelamento_materia:
+  - text: "O cancelamento de unidades curriculares será de <tempo> até <tempo>"
+  utter_cancelamento_materia:
+  - text: "Para cancelar a(s) unidade(s) curricular(es), clique [aqui](https://moodle3.ifsc.edu.br/mod/book/view.php?id=84263&chapterid=7073&lang=es) para ver o passo a passo."
+  utter_periodo_formaturas:
+  - text: "O período para solicitar a formatura será de <tempo> até <tempo>" 
+  utter_formatura:
+  - text: "Para solicitar sua formatura, clique [aqui] (https://docs.google.com/forms/d/e/1FAIpQLSfgBb9SYa_MZiEC5skRqTKlQJUftzYXBLGrgG84thfGomn2kQ/viewform) para entrar no formulário de solicitação."
+  utter_periodo_tranca_matricula:
+  - text: "A tranca de matrícula será de <tempo> até <tempo>"
+  utter_tranca_matricula:
+  - text: "Para trancamento de matrícula, clique [aqui](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) para ter acesso ao documento de Tracamento de matricula."
+  utter_periodo_recesso_escolar:
+  - text: "O recesso começa na data <tempo> e termina na data <tempo>."
+  utter_recesso:
+  - text: "Os feriados serão nas datas <tempo>."
 slots:
   documento:
     type: categorical
