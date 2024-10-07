@@ -104,7 +104,7 @@ responses:
   utter_menu_calendario_academico:
     - text: 'Beleza. voce escolheu Informações sobre datas e eventos CAC (Calendário Acadêmico). O que você deseja saber sobre informações a respeito do Calendário Acadêmico de 202X'
       buttons:
-      - title: "Período de validação das matérias"
+      - title: "Período de validação de Unidade curricular (matérias)"
         payload: "/periodo_validacao" 
 
       - title: "Período de cancelamento de Unidade Curricular (matéria)"
