@@ -227,4 +227,24 @@ nlu:
     - recesso escolar 
     - recesso
 
+- intent: horario_funcionamento
+  examples: |
+    - horario de funcionamento
+    - horario de aulas
+ 
+
+- intent: hora_coodenadores
+  examples: |
+    - horario dos coodenadores
+    - coodenadores de curso
+
+- intent: hora_monitoria
+  examples: |
+    - horario de monitoria
+    - monitoria
+
+- intent: hora_nucleo_pedagogico
+  examples: |
+    - horario do nucleo pedagogico
+    - horario do nucleo 
 

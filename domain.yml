@@ -32,6 +32,10 @@ intents:
 - periodo_formaturas
 - periodo_tranca_matricula
 - periodo_recesso_escolar
+- horario_funcionamento
+- hora_coodenadores
+- hora_monitoria
+- hora_nucleo_pedagogico
 
 entities:
 - tipo_documento
@@ -61,6 +65,9 @@ responses:
 
       - title: "Informações sobre datas e eventos CAC (Calendário Acadêmico)"
         payload: "/calendario_academico" 
+      
+      - title: "Horário de funcionamento (aulas, setores e serviços):"
+        payload: "/horario_funcionamento" 
         
 
 
@@ -121,7 +128,27 @@ responses:
 
       - title: "Voltar ao menu anterior"
         payload: "/voltar_menu_anterior"
+
+
+  utter_menu_horario_funcionamento:
+    - text: 'Beleza. voce escolheu Horário de funcionamento (aulas, setores e serviços). O que você deseja saber sobre informações a respeito de Horário de funcionamento.'
+      buttons: 
+      - title: "Horário de disponibilidade dos coordenadores"
+        payload: "/hora_coodenadores"
+
+      - title: "Horário de Monitoria (assistência ao aluno):"
+        payload: "/hora_monitoria" 
+
+
+      - title: "Horário de funcionamento do Núcleo pedagógico (assistência estudantil)"
+        payload: "/hora_nucleo_pedagogico"
+
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior" 
+
+
       
+
   utter_como_ajudar_mais:
     - text: 'deseja voltar ao menu inicial?'
       buttons:
@@ -214,6 +241,14 @@ responses:
   - text: "O recesso começa na data <tempo> e termina na data <tempo>."
   utter_recesso:
   - text: "Os feriados serão nas datas <tempo>."
+  utter_hora_coodenadores:
+  - text: "para saber o horário em que os coordenadores estão disponíveis, clique [aqui] (https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232)."
+  utter_hora_monitoria:
+  - text: "Ok, vou ajudar você. Para saber sobre Horario de monitoria você terá que falar com seu professor da Unidade curricular que vc desejá, clique [aqui](https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232) para ver os horarios que seu professor está no campus. "
+  utter_hora_nucleo:
+  - text: "O horário de atendimento será das 7h às 12h e das 13h30 às 18h, de segunda a sexta-feira, e será feito de forma remota através de telefones e e-mails."
+
+
 slots:
   documento:
     type: categorical
@@ -262,5 +297,5 @@ forms:
     - turma
 
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 1
+  carry_over_slots_to_new_session: false
