@@ -36,6 +36,10 @@ intents:
 - hora_coodenadores
 - hora_monitoria
 - hora_nucleo_pedagogico
+- hora_secretaria
+- hora_cantina
+- hora_campus
+- hora_biblioteca
 
 entities:
 - tipo_documento
@@ -68,9 +72,6 @@ responses:
       
       - title: "Horário de funcionamento (aulas, setores e serviços):"
         payload: "/horario_funcionamento" 
-        
-
-
 
   utter_menu_documento:
     - text: 'Você selecionou (Documentação de Alunos) do IFSC. Estou aqui para ajudar! Que informações específicas você gostaria de saber sobre os documentos necessários?'
@@ -89,9 +90,6 @@ responses:
 
       - title: "Voltar ao menu anterior"
         payload: "/voltar_menu_anterior"
-
-    
-
 
   utter_menu_info_ifsc:
     - text: 'Você escolheu (Informações para Estudantes do IFSC). Como posso ajudar ?'
@@ -139,15 +137,23 @@ responses:
       - title: "Horário de Monitoria (assistência ao aluno):"
         payload: "/hora_monitoria" 
 
-
       - title: "Horário de funcionamento do Núcleo pedagógico (assistência estudantil)"
         payload: "/hora_nucleo_pedagogico"
 
+      - title: "Horário de funcionamento da secretaria"
+        payload: "/hora_secretaria"
+
+      - title: "Horário de funcionamento da cantina"
+        payload: "/hora_cantina"
+
+      - title: "Horário de funcionamento do Câmpus"
+        payload: "/hora_campus"
+
+      - title: "Horário de funcionamento da biblioteca"
+        payload: "/hora_biblioteca"
+
       - title: "Voltar ao menu anterior"
-        payload: "/voltar_menu_anterior" 
-
-
-      
+        payload: "/voltar_menu_anterior"
 
   utter_como_ajudar_mais:
     - text: 'deseja voltar ao menu inicial?'
@@ -157,7 +163,6 @@ responses:
 
       - title: "Não"
         payload: "/nao_ajudar"
-
 
 
   utter_menu_tipo_documento:
@@ -247,7 +252,14 @@ responses:
   - text: "Ok, vou ajudar você. Para saber sobre Horario de monitoria você terá que falar com seu professor da Unidade curricular que vc desejá, clique [aqui](https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232) para ver os horarios que seu professor está no campus. "
   utter_hora_nucleo:
   - text: "O horário de atendimento será das 7h às 12h e das 13h30 às 18h, de segunda a sexta-feira, e será feito de forma remota através de telefones e e-mails."
-
+  utter_hora_secretaria:
+  - text: "O horário de atendimento será das 7h às 12h e das 13h30 às 18h, de segunda a sexta-feira. "
+  utter_hora_cantina:
+  - text: "O horário de funcionamento da cantina é das 7h às 21h de segunda a sexta-feira."
+  utter_hora_campus:
+  - text: "O horário de funcionamento do Câmpus é das 7h às 22:30h."
+  utter_hora_biblioteca:
+  - text: "O horário de funcionamento da biblioteca é das 7h30min às 21h de segunda a sexta-feira."
 
 slots:
   documento:

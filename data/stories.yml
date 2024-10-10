@@ -175,26 +175,49 @@ stories:
     - action: utter_recesso
     - action: utter_como_ajudar_mais
 
-  - story: horario de coordenadores de curso
+  - story: horarios do campus
     steps:
     - intent: horario_funcionamento
     - action: utter_menu_horario_funcionamento
+
+  - story: horario de coordenadores de curso
+    steps:
     - intent: hora_coodenadores
     - action: utter_hora_coodenadores
     - action: utter_como_ajudar_mais
 
   - story: horario de monitoria
     steps:
-    - intent: horario_funcionamento
-    - action: utter_menu_horario_funcionamento
     - intent: hora_monitoria
     - action: utter_hora_monitoria
     - action: utter_como_ajudar_mais
 
   - story: horario do nucleo pedagogico
     steps:
-    - intent: horario_funcionamento
-    - action: utter_menu_horario_funcionamento
     - intent: hora_nucleo_pedagogico
     - action: utter_hora_nucleo
+    - action: utter_como_ajudar_mais
+
+  - story: Horário de funcionamento da secretaria
+    steps:
+    - intent: hora_secretaria
+    - action: utter_hora_secretaria
+    - action: utter_como_ajudar_mais
+
+  - story: Horário de funcionamento da cantina
+    steps:
+    - intent: hora_cantina
+    - action: utter_hora_cantina
+    - action: utter_como_ajudar_mais
+
+  - story: Horário de funcionamento do Câmpus
+    steps:
+    - intent: hora_campus
+    - action: utter_hora_campus
+    - action: utter_como_ajudar_mais
+
+  - story: Horário de funcionamento da biblioteca
+    steps:
+    - intent: hora_biblioteca
+    - action: utter_hora_biblioteca
     - action: utter_como_ajudar_mais
