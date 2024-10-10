@@ -74,7 +74,7 @@ responses:
         payload: "/horario_funcionamento" 
 
   utter_menu_documento:
-    - text: 'Excelente escolha! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Em que posso ajudá-lo?'
+    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Em que posso ajudá-lo?'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -92,7 +92,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_info_ifsc:
-    - text: 'Excelente escolha! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Como posso ajudá-lo hoje?'
+    - text: 'Claro! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Como posso ajudá-lo hoje?'
       buttons:
       - title: "Localização do IFSC Gaspar" 
         payload: "/localizacao_campus" 
@@ -107,7 +107,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_calendario_academico:
-    - text: 'Excelente escolha! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Como posso ajudá-lo hoje?'
+    - text: 'Claro! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Como posso ajudá-lo hoje?'
       buttons:
       - title: "Período de validação de Unidade curricular (matérias)"
         payload: "/periodo_validacao" 
@@ -129,7 +129,7 @@ responses:
 
 
   utter_menu_horario_funcionamento:
-    - text: 'Excelente escolha! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Como posso ajudá-lo?'
+    - text: 'Claro! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Como posso ajudá-lo?'
       buttons: 
       - title: "Horário de disponibilidade dos coordenadores"
         payload: "/hora_coodenadores"
@@ -222,6 +222,12 @@ responses:
   - text: "Certo. Para acessar o período de validação acesse o [Calendario Academico](https://docs.google.com/spreadsheets/d/1JJDk-8g6qawFSWGH9qkSTiaDSTfaCowrbppMuU5cJOE/edit?gid=325098504#gid=325098504)."
   utter_validacao: 
   - text: "Ok. Para  validar a(s) matéria(s), fale com seu cordenador de curso."
+  utter_ask_nome:
+  - text: Qual o seu nome?
+  utter_ask_turma:
+  - text: Qual a sua turma?
+  utter_requerer_documento:
+  - text: Posso ajudar com isso!
   utter_periodo_cancelamento_materia:
   - text: "O cancelamento de unidades curriculares será de <tempo> até <tempo>"
   utter_cancelamento_materia:

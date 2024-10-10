@@ -71,6 +71,7 @@ class ActionEnviarRequererDocumento(Action):
 
         tipo_documento = tracker.get_slot("tipo_documento")
         print("Tipo de documento: " + tipo_documento)
+
         
         if documento == "atestado_matricula":
             documento = "atestado de matrícula"
@@ -115,7 +116,7 @@ class ActionEnviarChegadaTardia(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         nome = tracker.get_slot("nome")
-        print("Nome: " + nome)
+        
 
         turma = tracker.get_slot("turma").lower()
         turma = turma.replace("informática", "I")
@@ -128,7 +129,7 @@ class ActionEnviarChegadaTardia(Action):
             dispatcher.utter_message(text=f"Desculpe, não consegui entender a sua turma. Você poderia tentar de novo?")
             return [SlotSet("turma", None)]
         
-        print("Turma: " + turma)
+        
 
         horario = datetime.datetime.now().strftime("%H:%M")
 
