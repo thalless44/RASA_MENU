@@ -59,7 +59,7 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: 'Como posso ajudar você hoje.'
+    - text: 'Como posso ajudar você?'
       buttons:
       - title: "Documentação de alunos do IFSC" 
         payload:  "/inf_doc" 
@@ -74,7 +74,7 @@ responses:
         payload: "/horario_funcionamento" 
 
   utter_menu_documento:
-    - text: 'Você selecionou (Documentação de Alunos) do IFSC. Estou aqui para ajudar! Que informações específicas você gostaria de saber sobre os documentos necessários?'
+    - text: 'Excelente escolha! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Em que posso ajudá-lo?'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -85,16 +85,16 @@ responses:
       - title: "Atestado de frequencia"
         payload: "/atestado_frequencia" 
 
-      - title: "informar chegada tardia"
+      - title: "Informar chegada tardia"
         payload: "/chegada_tardia"
 
       - title: "Voltar ao menu anterior"
         payload: "/voltar_menu_anterior"
 
   utter_menu_info_ifsc:
-    - text: 'Você escolheu (Informações para Estudantes do IFSC). Como posso ajudar ?'
+    - text: 'Excelente escolha! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Como posso ajudá-lo hoje?'
       buttons:
-      - title: "Localização do ifsc" 
+      - title: "Localização do IFSC Gaspar" 
         payload: "/localizacao_campus" 
 
       - title: "Horario que o campus está aberto"
@@ -107,7 +107,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_calendario_academico:
-    - text: 'Beleza. voce escolheu Informações sobre datas e eventos CAC (Calendário Acadêmico). O que você deseja saber sobre informações a respeito do Calendário Acadêmico de 202X'
+    - text: 'Excelente escolha! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Como posso ajudá-lo hoje?'
       buttons:
       - title: "Período de validação de Unidade curricular (matérias)"
         payload: "/periodo_validacao" 
@@ -129,7 +129,7 @@ responses:
 
 
   utter_menu_horario_funcionamento:
-    - text: 'Beleza. voce escolheu Horário de funcionamento (aulas, setores e serviços). O que você deseja saber sobre informações a respeito de Horário de funcionamento.'
+    - text: 'Excelente escolha! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Como posso ajudá-lo?'
       buttons: 
       - title: "Horário de disponibilidade dos coordenadores"
         payload: "/hora_coodenadores"
@@ -156,7 +156,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_como_ajudar_mais:
-    - text: 'deseja voltar ao menu inicial?'
+    - text: 'Deseja voltar ao menu inicial?'
       buttons:
       - title: "Sim"
         payload: "/voltar_menu_anterior"
@@ -175,15 +175,12 @@ responses:
         payload: "/fisico"
 
 
-      
   utter_saudar:
-  - text: Olá! Sou seu assistente virtual do IFSC.
+  - text: Olá! Seja bem-vindo ao assitente virtual do IFSC Gaspar. Estou aqui para ajudar você
   utter_localizacao_campus:
   - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
   utter_site_campus:
   - text: O site do IFSC Câmpus Gaspar é https://www.ifsc.edu.br/web/campus-gaspar. Caso você queira saber mais sobre o IFSC, acesse https://www.ifsc.edu.br/.
-  utter_testando:
-  - text: Testando, 123... tem alguém aí?
   utter_nao_ajudar:
   - text: Tudo bem. Estarei aqui caso você precise de algo.
   utter_possui_conta:
@@ -204,16 +201,11 @@ responses:
   - text: Desculpe, não consigo te ajudar. Você poderia tentar de novo?
   utter_chegada_tardia:
   - text: Vixe. Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
-  utter_ask_nome:
-  - text: Qual o seu nome?
-  utter_ask_turma:
-  - text: Qual a sua turma?
-  utter_requerer_documento:
-  - text: Posso ajudar com isso!
+
   utter_ask_digital:
   - text: Certo. Para emitir o seu documento a partir do SIGAA, siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
   utter_ask_fisico:
-  - text: Beleza. Para receber o seu {documento} impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
+  - text: Ok. Para receber o seu {documento} impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
   utter_ask_possui_conta:
   - text: Você já possui uma conta no SIGAA?
   utter_contar_piada:
@@ -227,27 +219,27 @@ responses:
   - text: "Sabe o que um cromossomo falou para o outro?\nCromossomos felizes!"
   - text: "Um buraco negro é um tunel no fim da luz."
   utter_periodo_validacao:
-  - text: "Para acessar o período de validação acesse o [Calendario Academico](https://docs.google.com/spreadsheets/d/1JJDk-8g6qawFSWGH9qkSTiaDSTfaCowrbppMuU5cJOE/edit?gid=325098504#gid=325098504)."
+  - text: "Certo. Para acessar o período de validação acesse o [Calendario Academico](https://docs.google.com/spreadsheets/d/1JJDk-8g6qawFSWGH9qkSTiaDSTfaCowrbppMuU5cJOE/edit?gid=325098504#gid=325098504)."
   utter_validacao: 
-  - text: "Para  validar a(s) matéria(s), fale com seu cordenador de curso."
+  - text: "Ok. Para  validar a(s) matéria(s), fale com seu cordenador de curso."
   utter_periodo_cancelamento_materia:
   - text: "O cancelamento de unidades curriculares será de <tempo> até <tempo>"
   utter_cancelamento_materia:
-  - text: "Para cancelar a(s) unidade(s) curricular(es), clique [aqui](https://moodle3.ifsc.edu.br/mod/book/view.php?id=84263&chapterid=7073&lang=es) para ver o passo a passo."
+  - text: "Tudo Bem. Para cancelar a(s) unidade(s) curricular(es), clique [aqui](https://moodle3.ifsc.edu.br/mod/book/view.php?id=84263&chapterid=7073&lang=es) para ver o passo a passo."
   utter_periodo_formaturas:
   - text: "O período para solicitar a formatura será de <tempo> até <tempo>" 
   utter_formatura:
   - text: "Para solicitar sua formatura, clique [aqui] (https://docs.google.com/forms/d/e/1FAIpQLSfgBb9SYa_MZiEC5skRqTKlQJUftzYXBLGrgG84thfGomn2kQ/viewform) para entrar no formulário de solicitação."
   utter_periodo_tranca_matricula:
-  - text: "A tranca de matrícula será de <tempo> até <tempo>"
+  - text: "O trancamento de matrícula será de <tempo> até <tempo>"
   utter_tranca_matricula:
   - text: "Para trancamento de matrícula, clique [aqui](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) para ter acesso ao documento de Tracamento de matricula."
   utter_periodo_recesso_escolar:
   - text: "O recesso começa na data <tempo> e termina na data <tempo>."
   utter_recesso:
-  - text: "Os feriados serão nas datas <tempo>."
+  - text: "O feriado será na data <tempo>."
   utter_hora_coodenadores:
-  - text: "para saber o horário em que os coordenadores estão disponíveis, clique [aqui] (https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232)."
+  - text: "Para saber o horário em que os coordenadores estão disponíveis, clique [aqui] (https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232)."
   utter_hora_monitoria:
   - text: "Ok, vou ajudar você. Para saber sobre Horario de monitoria você terá que falar com seu professor da Unidade curricular que vc desejá, clique [aqui](https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232) para ver os horarios que seu professor está no campus. "
   utter_hora_nucleo:
