@@ -59,7 +59,7 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: 'Como posso ajudar você?'
+    - text: 'Selecione a opção que deseja ajuda'
       buttons:
       - title: "Documentação de alunos do IFSC" 
         payload:  "/inf_doc" 
@@ -74,7 +74,7 @@ responses:
         payload: "/horario_funcionamento" 
 
   utter_menu_documento:
-    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Em que posso ajudá-lo?'
+    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
