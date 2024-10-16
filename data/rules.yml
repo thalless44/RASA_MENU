@@ -10,6 +10,11 @@ rules:
   - action: action_clear_slot_turma
   - action: utter_menu_opcoes
 
+- rule: documentos academicos
+  steps:
+  - intent: documentos_academicos
+  - action: utter_menu_documentos_academicos 
+
 - rule: Ativar chegada tardia
   steps:
   - intent: chegada_tardia

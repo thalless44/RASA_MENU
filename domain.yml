@@ -85,14 +85,15 @@ responses:
   utter_menu_documentos_academicos:
     - text: 'Estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Selecione a opção que eu possa te ajudar'
       buttons:
+      
       - title: "Histórico escolar"
-        payload: "historico_escolar"
+        payload: "/historico_escolar"
 
       - title: "Atestado de matrícula"
-        payload: "atestado_matricula"
+        payload: "/atestado_matricula"
 
       - tilte: "Declaração de vínculo"
-        payload: "declaracao_vinculo"
+        payload: "/declaracao_vinculo"
 
   utter_menu_documento:
     - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
