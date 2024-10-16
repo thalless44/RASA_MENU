@@ -268,5 +268,11 @@ nlu:
     - declaracao vinculo
     - declaracao
 
+- intent: id_estudante
+  examples: |
+    - id do estudante
+    - id estudante
+    
+
 
 

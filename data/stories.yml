@@ -64,7 +64,16 @@ stories:
     - action: utter_declaracao_vinculo_passo_5
     - action: utter_como_ajudar_mais
 
-  
+  - story: Id estudantil
+    steps:
+    - intent: id_estudante
+    - action: utter_id_estudante_passo_1
+    - action: utter_id_estudante_passo_2
+    - action: utter_id_estudante_passo_3
+    - action: utter_id_estudante_passo_4
+    - action: utter_id_estudante_passo_5
+    - action: utter_como_ajudar_mais
+
   - story: Perguntar horários do campus
     steps:
     - intent: inf_ifsc

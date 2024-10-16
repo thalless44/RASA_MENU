@@ -44,6 +44,7 @@ intents:
 - procedimantos_academicos
 - documentos_academicos
 - declaracao_vinculo
+- id_estudante
 
 entities:
 - tipo_documento
@@ -85,15 +86,18 @@ responses:
   utter_menu_documentos_academicos:
     - text: 'Estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Selecione a opção que eu possa te ajudar'
       buttons:
-      
+
       - title: "Histórico escolar"
         payload: "/historico_escolar"
 
       - title: "Atestado de matrícula"
         payload: "/atestado_matricula"
 
-      - tilte: "Declaração de vínculo"
+      - title: "Declaração de vínculo"
         payload: "/declaracao_vinculo"
+
+      - title: "ID estudantil"
+        payload: "/id_estudante"
 
   utter_menu_documento:
     - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
@@ -298,13 +302,25 @@ responses:
   utter_declaracao_vinculo_passo_1:
   - text: "Certo. Para emitir o documento digital, siga estas etapas:"
   utter_declaracao_vinculo_passo_2:
-  - text: "1. Acesse o SIGAA, utilizando seu login e senha"
+  - text: 1. Acesse o SIGAA, utilizando seu login e senha
   utter_declaracao_vinculo_passo_3:
-  - text: "2. Clique no menu de Ensino"
+  - text: 2. Clique no menu de Ensino
   utter_declaracao_vinculo_passo_4:
-  - text: "3. Clique em Id Estudantil"
+  - text: 3. Clique em Id Estudantil
   utter_declaracao_vinculo_passo_5:
   - text: "Assim, é possível visualizar seu Id Estudantil."
+  utter_id_estudante_passo_1:
+  - text: "Certo. Para emitir o documento digital, siga estas etapas:"
+  utter_id_estudante_passo_2:
+  - text: "1. Acesse o SIGAA, utilizando seu login e senha"
+  utter_id_estudante_passo_3:
+  - text: "2. Clique no menu de Ensino"
+  utter_id_estudante_passo_4:
+  - text: "3. Clique em Id Estudantil"
+  utter_id_estudante_passo_5:
+  - text: "Assim, é possível visualizar seu Id Estudantil."
+
+
 
 
 slots:
