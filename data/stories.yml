@@ -43,6 +43,27 @@ stories:
     - action: utter_historico_passo_4
     - action: utter_historico_passo_5
     - action: utter_como_ajudar_mais
+
+  - story: atestado de maticula
+    steps:
+    - intent: atestado_matricula
+    - action: utter_atestado_matricula_passo_1
+    - action: utter_atestado_matricula_passo_2 
+    - action: utter_atestado_matricula_passo_3
+    - action: utter_atestado_matricula_passo_4
+    - action: utter_atestado_matricula_passo_5
+    - action: utter_como_ajudar_mais
+
+  - story: declaração de vinculo
+    steps:
+    - intent: declaracao_vinculo
+    - action: utter_declaracao_vinculo_passo_1
+    - action: utter_declaracao_vinculo_passo_2
+    - action: utter_declaracao_vinculo_passo_3
+    - action: utter_declaracao_vinculo_passo_4
+    - action: utter_declaracao_vinculo_passo_5
+    - action: utter_como_ajudar_mais
+
   
   - story: Perguntar horários do campus
     steps:
@@ -52,18 +73,6 @@ stories:
     - action: action_processar_horario_campus
     - action: utter_como_ajudar_mais
   
-  - story: Cancelar matrícula
-    steps:
-    - intent: inf_doc
-    - action: utter_menu_documento
-    - intent: cancelar_matricula
-    - action: utter_cancelar_matricula
-    - action: utter_cancelar_matricula_passos_1
-    - action: utter_cancelar_matricula_passos_2
-    - action: utter_cancelar_matricula_passos_3
-    - action: utter_como_ajudar_mais
-    - intent: out_of_scope
-    - action: utter_default
 
   - story: Site do ifsc
     steps:

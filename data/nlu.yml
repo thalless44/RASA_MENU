@@ -253,7 +253,7 @@ nlu:
     - procedimentos acdemicos 
     - procedimentos
 
-- intent: hirtorico_escolar
+- intent: historico_escolar
   examples: |
     - historico escolar 
     - historico
@@ -262,6 +262,11 @@ nlu:
   examples: |
     - documentos academicos 
     - documentos
+
+- intent: declaracao_vinculo
+  examples: |
+    - declaracao vinculo
+    - declaracao
 
 
 

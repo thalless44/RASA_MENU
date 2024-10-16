@@ -43,6 +43,7 @@ intents:
 - historico_escolar
 - procedimantos_academicos
 - documentos_academicos
+- declaracao_vinculo
 
 entities:
 - tipo_documento
@@ -87,8 +88,11 @@ responses:
       - title: "Histórico escolar"
         payload: "historico_escolar"
 
- ##     - title: "Atestado de matrícula"
-##        payload: "atestado_matricula"
+      - title: "Atestado de matrícula"
+        payload: "atestado_matricula"
+
+      - tilte: "Declaração de vínculo"
+        payload: "declaracao_vinculo"
 
   utter_menu_documento:
     - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
@@ -204,14 +208,16 @@ responses:
   - text: Ótimo!
   utter_criar_conta:
   - text: Tudo bem. Já que ainda não tem login e senha do aluno, você precisa enviar um e-mail para a Secretaria (secretaria.gaspar@ifsc.edu.br) e solicitar uma nova senha. Ah, e para sua segurança, você também precisará de uma foto frente e verso do seu documento de identidade.
-  utter_cancelar_matricula:
-  - text: 'Entendido! O cancelamento de matrícula deve ser feito em algumas etapas:'
-  utter_cancelar_matricula_passos_1:
-  - text: Primeiramente, faça o download do requerimento disponível no [link](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) e preencha-o.
-  utter_cancelar_matricula_passos_2:
-  - text: Então, digitalize o requerimento e envie para a secretaria do IFSC Campus Gaspar em [secretaria.gaspar@ifsc.edu.br](mailto:secretaria.gaspar@ifsc.edu.br) junto de um documento de identificação. Caso o aluno seja menor de idade, no requerimento deve constar também a assinatura e documento do responsável. Caso necesário, o requerimento pode ser retirado impresso na secretaria do IFSC Campus Gaspar.
-  utter_cancelar_matricula_passos_3:
-  - text: Por fim, o documento passará por tramitação da Biblioteca Acadêmica e da Coordenadoria de Curso para análise. O aluno será informado por e-mail sobre o andamento e o resultado da análise.
+  utter_atestado_matricula_passo_1:
+  - text: 'Certo. Para emitir o documento digital, siga estas etapas:'
+  utter_atestado_matricula_passo_2:
+  - text: Acesse o SIGAA, utilizando seu login e senha
+  utter_atestado_matricula_passo_3:
+  - text: Clique no menu Ensino.
+  utter_atestado_matricula_passo_4:
+  - text: Clique em Atestado de Matrícula.
+  utter_atestado_matricula_passo_5:
+  - text: Assim, é possível visualizar seu atestado de matricula.
   utter_ask_rephrase:
   - text: Desculpe. Não consegui entender o seu pedido. Você poderia tentar de novo?
   utter_default:
@@ -287,7 +293,17 @@ responses:
   utter_historico_passo_4:
   - text: "3. Clique em Consultar Histórico Escolar"
   utter_historico_passo_5:
-  - text: "Assim sendo possivel visualizar seu histórico escolar."
+  - text: "Assim, é possível visualizar seu histórico escolar."
+  utter_declaracao_vinculo_passo_1:
+  - text: "Certo. Para emitir o documento digital, siga estas etapas:"
+  utter_declaracao_vinculo_passo_2:
+  - text: "1. Acesse o SIGAA, utilizando seu login e senha"
+  utter_declaracao_vinculo_passo_3:
+  - text: "2. Clique no menu de Ensino"
+  utter_declaracao_vinculo_passo_4:
+  - text: "3. Clique em Id Estudantil"
+  utter_declaracao_vinculo_passo_5:
+  - text: "Assim, é possível visualizar seu Id Estudantil."
 
 
 slots:
