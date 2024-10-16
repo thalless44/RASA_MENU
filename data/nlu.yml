@@ -272,7 +272,16 @@ nlu:
   examples: |
     - id do estudante
     - id estudante
-    
+
+- intent: segunda_chamada
+  examples: |
+    - segunda chamada 
+    - segunda prova 
+
+- intent: trancamento_matricula
+  examples: |
+    - tracamento matricula
+    - trancar matricula 
 
 
 

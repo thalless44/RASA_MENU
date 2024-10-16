@@ -45,6 +45,8 @@ intents:
 - documentos_academicos
 - declaracao_vinculo
 - id_estudante
+- segunda_chamada
+- trancamento_matricula
 
 entities:
 - tipo_documento
@@ -84,7 +86,7 @@ responses:
 
 
   utter_menu_documentos_academicos:
-    - text: 'Estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Selecione a opção que eu possa te ajudar'
+    - text: 'Estou à disposição para te ajudar com os documentos acadêmicos do IFSC. Por favor selecione a opção que eu possa te ajudar'
       buttons:
 
       - title: "Histórico escolar"
@@ -99,8 +101,18 @@ responses:
       - title: "ID estudantil"
         payload: "/id_estudante"
 
+
+  utter_menu_procedimentos_academicos:
+    - text: 'Claro, estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Por favor selecione a opção que eu possa te ajudar'
+      buttons:
+      - title: "Segunda chamada"
+        payload: "/segunda_chamada" 
+
+      - title: "Trancamento de matrícula "
+        payload: "/trancamento_matricula"
+
   utter_menu_documento:
-    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
+    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Por favor selecione a opção que eu possa te ajudar'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -216,11 +228,11 @@ responses:
   utter_atestado_matricula_passo_1:
   - text: 'Certo. Para emitir o documento digital, siga estas etapas:'
   utter_atestado_matricula_passo_2:
-  - text: Acesse o SIGAA, utilizando seu login e senha
+  - text: 1. Acesse o SIGAA, utilizando seu login e senha
   utter_atestado_matricula_passo_3:
-  - text: Clique no menu Ensino.
+  - text: 2. Clique no menu Ensino.
   utter_atestado_matricula_passo_4:
-  - text: Clique em Atestado de Matrícula.
+  - text: 3. Clique em Atestado de Matrícula.
   utter_atestado_matricula_passo_5:
   - text: Assim, é possível visualizar seu atestado de matricula.
   utter_ask_rephrase:
@@ -319,6 +331,24 @@ responses:
   - text: "3. Clique em Id Estudantil"
   utter_id_estudante_passo_5:
   - text: "Assim, é possível visualizar seu Id Estudantil."
+  utter_segunda_chamada_passo_1:
+  - text: "Entendido! O pedido de segunda chamada deve ser feito em algumas etapas:"
+  utter_segunda_chamada_passo_2:
+  - text: "1. Preencha o requerimento deste [link](https://www.ifsc.edu.br/documents/35973/2018778/Requerimento+Diversos.pdf/7b0185f5-24e8-45c2-acff-6010803019f2). Não esqueça de marcar a opção desejada!"
+  utter_segunda_chamada_passo_3:
+  - text: "2. Envie o requerimento preenchido e uma cópia do seu documento de identificação para o e-mail: secretaria.gaspar@ifsc.edu.br. Certifique-se de que a digitalização dos documentos esteja legível"
+  utter_segunda_chamada_passo_4:
+  - text: "3. Verifique seu e-mail regularmente para acompanhar o andamento do pedido."
+  utter_trancamento_matricula_passo_1:
+  - text: "Entendido! O pedido de trancamento de matrícula deve ser feito em algumas etapas:"
+  utter_trancamento_matricula_passo_2:
+  - text: "1. Preencha o requerimento deste [link](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf). Não esqueça de marcar a opção desejada!" 
+  utter_trancamento_matricula_passo_3:
+  - text: "2. Envie o requerimento preenchido e uma cópia do seu documento de identificação para o e-mail: secretaria.gaspar@ifsc.edu.br. Certifique-se de que a digitalização dos documentos esteja legível"
+  utter_trancamento_matricula_passo_4:
+  - text: "3. Verifique seu e-mail regularmente para acompanhar o andamento do pedido"
+
+
 
 
 

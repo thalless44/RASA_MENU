@@ -74,6 +74,24 @@ stories:
     - action: utter_id_estudante_passo_5
     - action: utter_como_ajudar_mais
 
+  - story: segunda chamada 
+    steps:
+    - intent: segunda_chamada
+    - action: utter_segunda_chamada_passo_1
+    - action: utter_segunda_chamada_passo_2
+    - action: utter_segunda_chamada_passo_3
+    - action: utter_segunda_chamada_passo_4
+    - action: utter_como_ajudar_mais
+
+  - story: trancamento de matricula
+    steps:
+    - intent: trancamento_matricula
+    - action: utter_trancamento_matricula_passo_1
+    - action: utter_trancamento_matricula_passo_2
+    - action: utter_trancamento_matricula_passo_3
+    - action: utter_trancamento_matricula_passo_4
+    - action: utter_como_ajudar_mais
+
   - story: Perguntar horários do campus
     steps:
     - intent: inf_ifsc
@@ -254,3 +272,8 @@ stories:
     - intent: hora_biblioteca
     - action: utter_hora_biblioteca
     - action: utter_como_ajudar_mais
+
+  - story: menu procedimentos academicos
+    steps:
+    - intent: procedimantos_academicos
+    - action: utter_menu_procedimentos_academicos
