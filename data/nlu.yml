@@ -282,6 +282,19 @@ nlu:
   examples: |
     - tracamento matricula
     - trancar matricula 
+  
+- intent: cancelamento_matricula_coponente
+  examples: |
+    - cancelar matricula coponente
+    - cancelar coponente de matricula
+
+- intent: destrancamento_reingresso
+  examples: |
+    - destrancamento reingresso
+    - destrancar reingresso
+
+
+
 
 
 

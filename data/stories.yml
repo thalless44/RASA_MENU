@@ -92,6 +92,27 @@ stories:
     - action: utter_trancamento_matricula_passo_4
     - action: utter_como_ajudar_mais
 
+  - story: Cancelamento de matrícula em Componente Curricular
+    steps:
+    - intent: cancelamento_matricula_coponente
+    - action: utter_cancelamento_matricula_coponente_1
+    - action: utter_cancelamento_matricula_coponente_2
+    - action: utter_cancelamento_matricula_coponente_3
+    - action: utter_cancelamento_matricula_coponente_4
+    - action: utter_cancelamento_matricula_coponente_5
+    - action: utter_cancelamento_matricula_coponente_6
+    - action: utter_cancelamento_matricula_coponente_7
+    - action: utter_como_ajudar_mais
+
+  - story: Destrancamento/reingresso
+    steps:
+    - intent: destrancamento_reingresso
+    - action: utter_destrancamento_reingresso_passo_1
+    - action: utter_destrancamento_reingresso_passo_2
+    - action: utter_destrancamento_reingresso_passo_3
+    - action: utter_destrancamento_reingresso_passo_4
+    - action: utter_como_ajudar_mais
+
   - story: Perguntar horários do campus
     steps:
     - intent: inf_ifsc
@@ -223,7 +244,6 @@ stories:
     steps:
     - intent: periodo_recesso_escolar
     - action: utter_periodo_recesso_escolar
-    - action: utter_recesso
     - action: utter_como_ajudar_mais
 
   - story: horarios do campus

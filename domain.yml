@@ -47,6 +47,8 @@ intents:
 - id_estudante
 - segunda_chamada
 - trancamento_matricula
+- cancelamento_matricula_coponente
+- destrancamento_reingresso
 
 entities:
 - tipo_documento
@@ -66,7 +68,7 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: 'Selecione a opção que deseje ajuda'
+    - text: 'Sou o assistente virtual e estou aqui para ajudar com suas dúvidas e solicitações. Posso te auxiliar com informações sobre matrículas, prazos, disciplinas, requerimentos acadêmicos e outros serviços da secretaria. Por favor selecione a opção que eu possa ajudar'
       buttons:
 
       - title: "Documentos acadêmicos (Histórico escolar, atestado de matrícula,...)"
@@ -74,9 +76,6 @@ responses:
 
       - title: "Procedimentos acadêmicos (Segunda chamada de prova, trancamento de matrícula,....)" 
         payload:  "/procedimantos_academicos" 
-
-      - title:  "Informações para estudantes do IFSC"
-        payload: "/inf_ifsc" 
 
       - title: "Informações sobre datas e eventos CAC (Calendário Acadêmico)"
         payload: "/calendario_academico" 
@@ -86,7 +85,7 @@ responses:
 
 
   utter_menu_documentos_academicos:
-    - text: 'Estou à disposição para te ajudar com os documentos acadêmicos do IFSC. Por favor selecione a opção que eu possa te ajudar'
+    - text: 'Estou à disposição para te ajudar com os documentos acadêmicos do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons:
 
       - title: "Histórico escolar"
@@ -101,9 +100,12 @@ responses:
       - title: "ID estudantil"
         payload: "/id_estudante"
 
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior"
+
 
   utter_menu_procedimentos_academicos:
-    - text: 'Claro, estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Por favor selecione a opção que eu possa te ajudar'
+    - text: 'Claro, estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons:
       - title: "Segunda chamada"
         payload: "/segunda_chamada" 
@@ -111,8 +113,19 @@ responses:
       - title: "Trancamento de matrícula "
         payload: "/trancamento_matricula"
 
+      - title: "Cancelamento de matrícula em Componente Curricular"
+        payload: "cancelamento_matricula_coponente"
+
+      - title: "Destrancamento/reingresso"
+        payload: "destrancamento_reingresso"
+      
+
+      - title: "Voltar ao menu anterior"
+        payload: "/voltar_menu_anterior"
+
+
   utter_menu_documento:
-    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Por favor selecione a opção que eu possa te ajudar'
+    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -130,7 +143,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_info_ifsc:
-    - text: 'Claro! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Como posso ajudá-lo hoje?'
+    - text: 'Claro! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons:
       - title: "Localização do IFSC Gaspar" 
         payload: "/localizacao_campus" 
@@ -145,7 +158,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_calendario_academico:
-    - text: 'Claro! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Como posso ajudá-lo hoje?'
+    - text: 'Claro! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons:
       - title: "Período de validação de Unidade curricular (matérias)"
         payload: "/periodo_validacao" 
@@ -167,7 +180,7 @@ responses:
 
 
   utter_menu_horario_funcionamento:
-    - text: 'Claro! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Como posso ajudá-lo?'
+    - text: 'Claro! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Por favor selecione a opção que eu possa ajudar'
       buttons: 
       - title: "Horário de disponibilidade dos coordenadores"
         payload: "/hora_coodenadores"
@@ -214,7 +227,7 @@ responses:
 
 
   utter_saudar:
-  - text: Olá! Seja bem-vindo ao assitente virtual do IFSC Gaspar. Estou aqui para ajudar você
+  - text: Olá! Bem-vindo à Secretaria da Coordenação do Curso de Análise e Desenvolvimento de Sistemas do IFSC/Gaspar. 
   utter_localizacao_campus:
   - text: O IFSC Câmpus Gaspar fica na Rua Adriano Kormann, 510, no bairro Bela Vista, em Gaspar, Santa Catarina. O telefone para contato é (47) 3318-3700.
   utter_site_campus:
@@ -270,21 +283,19 @@ responses:
   - text: Posso ajudar com isso!
   ##---------------------------------------------------------------##
   utter_periodo_cancelamento_materia:
-  - text: "O cancelamento de unidades curriculares será de <tempo> até <tempo>"
+  - text: "O prazo para cancelar a matrícula em uma unidade curricular no IFSC Campus Gaspar é de até 25% do período letivo"
   utter_cancelamento_materia:
   - text: "Tudo Bem. Para cancelar a(s) unidade(s) curricular(es), clique [aqui](https://moodle3.ifsc.edu.br/mod/book/view.php?id=84263&chapterid=7073&lang=es) para ver o passo a passo."
   utter_periodo_formaturas:
-  - text: "O período para solicitar a formatura será de <tempo> até <tempo>" 
+  - text: "Para visualizar o período de solicitação de formatura clique no [link](https://www.ifsc.edu.br/web/campus-gaspar/formatura) " 
   utter_formatura:
   - text: "Para solicitar sua formatura, clique [aqui] (https://docs.google.com/forms/d/e/1FAIpQLSfgBb9SYa_MZiEC5skRqTKlQJUftzYXBLGrgG84thfGomn2kQ/viewform) para entrar no formulário de solicitação."
   utter_periodo_tranca_matricula:
-  - text: "O trancamento de matrícula será de <tempo> até <tempo>"
+  - text: "Para visualizar o periodo de  trancamento de matrícula clique no [link](https://www.ifsc.edu.br/web/noticias/w/solicitacoes-de-retorno-de-trancamento-e-reingresso-nos-cursos-tecnicos-subsequentes-e-superiores-deve-ser-feita-ate-11-de-agosto#:~:text=AVISOS%20Data%20de%20Publicação%3A%2018,reingresso%20até%2011%20de%20agosto.)"
   utter_tranca_matricula:
   - text: "Para trancamento de matrícula, clique [aqui](https://www.ifsc.edu.br/documents/35973/2018778/Cancelamento+Trancamento+e+Transfer%C3%AAncia+Externa.pdf/d5f9a6c2-0e30-4f19-a6a8-a238ec028caf) para ter acesso ao documento de Tracamento de matricula."
   utter_periodo_recesso_escolar:
-  - text: "O recesso começa na data <tempo> e termina na data <tempo>."
-  utter_recesso:
-  - text: "O feriado será na data <tempo>."
+  - text: "Para visualizar o periodo de recessos e feriados clique no [link](https://docs.google.com/spreadsheets/d/1JJDk-8g6qawFSWGH9qkSTiaDSTfaCowrbppMuU5cJOE/edit?gid=325098504#gid=325098504)."
   ##____________________________________________________##
   utter_hora_coodenadores:
   - text: "Para saber o horário em que os coordenadores estão disponíveis, clique [aqui] (https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232)."
@@ -346,6 +357,30 @@ responses:
   utter_trancamento_matricula_passo_3:
   - text: "2. Envie o requerimento preenchido e uma cópia do seu documento de identificação para o e-mail: secretaria.gaspar@ifsc.edu.br. Certifique-se de que a digitalização dos documentos esteja legível"
   utter_trancamento_matricula_passo_4:
+  - text: "3. Verifique seu e-mail regularmente para acompanhar o andamento do pedido"
+
+  utter_cancelamento_matricula_coponente_1:
+  - text: "Entendido! O pedido de cancelamento de matrícula em componente curricular deve ser feito pelo SIGAA. Para isso, siga estas etapas:"
+  utter_cancelamento_matricula_coponente_2:
+  - text: "1. Acesse o SIGAA, utilizando seu login e senha"
+  utter_cancelamento_matricula_coponente_3:
+  - text: "2. Clique no menu Ensino"
+  utter_cancelamento_matricula_coponente_4:
+  - text: "3. Clique em Cancelamento de Matrícula em Componente Curricula"
+  utter_cancelamento_matricula_coponente_5:
+  - text: "Escolha a opção Solicitar Cancelamento"
+  utter_cancelamento_matricula_coponente_6:
+  - text: "Selecione a componente curricular desejada e confirme o procedimento"
+  utter_cancelamento_matricula_coponente_7:
+  - text: "Aguardar a coordenação de curso confirmar o cancelamento"
+
+  utter_destrancamento_reingresso_passo_1:
+  - text: "Entendido! O pedido de destrancamento/reingresso deve ser feito em algumas etapas"
+  utter_destrancamento_reingresso_passo_2:
+  - text: "1. Preencha o requerimento deste [link](https://www.ifsc.edu.br/documents/35973/2018778/Requerimento+Diversos.pdf/7b0185f5-24e8-45c2-acff-6010803019f2). Não esqueça de marcar a opção desejada!"
+  utter_destrancamento_reingresso_passo_3:
+  - text: "2. Envie o requerimento preenchido e uma cópia do seu documento de identificação para o e-mail: secretaria.gaspar@ifsc.edu.br. Certifique-se de que a digitalização dos documentos esteja legível"
+  utter_destrancamento_reingresso_passo_4:
   - text: "3. Verifique seu e-mail regularmente para acompanhar o andamento do pedido"
 
 
