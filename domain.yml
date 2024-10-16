@@ -40,6 +40,9 @@ intents:
 - hora_cantina
 - hora_campus
 - hora_biblioteca
+- historico_escolar
+- procedimantos_academicos
+- documentos_academicos
 
 entities:
 - tipo_documento
@@ -59,10 +62,14 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: 'Selecione a opção que deseja ajuda'
+    - text: 'Selecione a opção que deseje ajuda'
       buttons:
-      - title: "Documentação de alunos do IFSC" 
-        payload:  "/inf_doc" 
+
+      - title: "Documentos acadêmicos (Histórico escolar, atestado de matrícula,...)"
+        payload:  "/documentos_academicos"
+
+      - title: "Procedimentos acadêmicos (Segunda chamada de prova, trancamento de matrícula,....)" 
+        payload:  "/procedimantos_academicos" 
 
       - title:  "Informações para estudantes do IFSC"
         payload: "/inf_ifsc" 
@@ -72,6 +79,16 @@ responses:
       
       - title: "Horário de funcionamento (aulas, setores e serviços):"
         payload: "/horario_funcionamento" 
+
+
+  utter_menu_documentos_academicos:
+    - text: 'Estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Selecione a opção que eu possa te ajudar'
+      buttons:
+      - title: "Histórico escolar"
+        payload: "historico_escolar"
+
+ ##     - title: "Atestado de matrícula"
+##        payload: "atestado_matricula"
 
   utter_menu_documento:
     - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Selecione a opção que eu possa te ajudar?'
@@ -203,9 +220,9 @@ responses:
   - text: Vixe. Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
 
   utter_ask_digital:
-  - text: Certo. Para emitir o seu documento a partir do SIGAA, siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
+  - text: Certo. Para emitir o seu documento siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
   utter_ask_fisico:
-  - text: Ok. Para receber o seu {documento} impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
+  - text: Ok. Para receber o seu documento impresso com carimbo e assinatura, você deve ir à secretaria do IFSC Campus Gaspar pessoalmente. O horário de atendimento é de segunda a sexta-feira, das 7h às 23h30.
   utter_ask_possui_conta:
   - text: Você já possui uma conta no SIGAA?
   utter_contar_piada:
@@ -228,6 +245,7 @@ responses:
   - text: Qual a sua turma?
   utter_requerer_documento:
   - text: Posso ajudar com isso!
+  ##---------------------------------------------------------------##
   utter_periodo_cancelamento_materia:
   - text: "O cancelamento de unidades curriculares será de <tempo> até <tempo>"
   utter_cancelamento_materia:
@@ -244,6 +262,7 @@ responses:
   - text: "O recesso começa na data <tempo> e termina na data <tempo>."
   utter_recesso:
   - text: "O feriado será na data <tempo>."
+  ##____________________________________________________##
   utter_hora_coodenadores:
   - text: "Para saber o horário em que os coordenadores estão disponíveis, clique [aqui] (https://agenda.ifsc.edu.br/php/servidores.php?idCampus=2232)."
   utter_hora_monitoria:
@@ -258,6 +277,18 @@ responses:
   - text: "O horário de funcionamento do Câmpus é das 7h às 22:30h."
   utter_hora_biblioteca:
   - text: "O horário de funcionamento da biblioteca é das 7h30min às 21h de segunda a sexta-feira."
+
+  utter_historico_passo_1:
+  - text: "Certo. Para emitir o documento digital, siga estas etapas:"
+  utter_historico_passo_2:
+  - text: "1. Acesse o SIGAA,utilizando seu login e senha"
+  utter_historico_passo_3:
+  - text: "2. Clique no menu Ensino"
+  utter_historico_passo_4:
+  - text: "3. Clique em Consultar Histórico Escolar"
+  utter_historico_passo_5:
+  - text: "Assim sendo possivel visualizar seu histórico escolar."
+
 
 slots:
   documento:

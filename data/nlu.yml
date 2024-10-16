@@ -248,3 +248,20 @@ nlu:
     - horario do nucleo pedagogico
     - horario do nucleo 
 
+- intent: procedimantos_academicos
+  examples: |
+    - procedimentos acdemicos 
+    - procedimentos
+
+- intent: hirtorico_escolar
+  examples: |
+    - historico escolar 
+    - historico
+
+- intent: documentos_academicos
+  examples: |
+    - documentos academicos 
+    - documentos
+
+
+

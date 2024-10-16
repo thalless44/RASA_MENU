@@ -27,7 +27,22 @@ stories:
     - intent: localizacao_campus
     - action: utter_localizacao_campus
     - action: utter_como_ajudar_mais
-  
+
+  - story: menu documentos academicos 
+    steps:
+    - intent: documentos_academicos
+    - action: utter_menu_documentos_academicos
+
+
+  - story: historico escolar
+    steps:
+    - intent: historico_escolar
+    - action: utter_historico_passo_1
+    - action: utter_historico_passo_2 
+    - action: utter_historico_passo_3
+    - action: utter_historico_passo_4
+    - action: utter_historico_passo_5
+    - action: utter_como_ajudar_mais
   
   - story: Perguntar horários do campus
     steps:
