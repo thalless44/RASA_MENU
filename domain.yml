@@ -68,13 +68,13 @@ actions:
 
 responses:
   utter_menu_opcoes:
-    - text: 'Sou o assistente virtual e estou aqui para ajudar com suas dúvidas e solicitações. Posso te auxiliar com informações sobre matrículas, prazos, disciplinas, requerimentos acadêmicos e outros serviços da secretaria. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Olá! Estou aqui para ajudar com suas dúvidas e solicitações. Posso fornecer informações sobre matrículas, prazos, disciplinas, requerimentos acadêmicos e outros serviços da secretaria. Como posso ajudar você hoje? Basta escolher uma opção'
       buttons:
 
       - title: "Documentos acadêmicos (Histórico escolar, atestado de matrícula,...)"
         payload:  "/documentos_academicos"
 
-      - title: "Procedimentos acadêmicos (Segunda chamada de prova, trancamento de matrícula,....)" 
+      - title: "Procedimentos acadêmicos (Segunda chamada de prova, trancamento de matrícula,...)" 
         payload:  "/procedimantos_academicos" 
 
       - title: "Informações sobre datas e eventos CAC (Calendário Acadêmico)"
@@ -207,12 +207,12 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_como_ajudar_mais:
-    - text: 'Deseja voltar ao menu inicial?'
+    - text: 'Se precisar de mais esclarecimentos, posso levá-lo de volta ao menu principal. O que prefere?'
       buttons:
-      - title: "Sim"
+      - title: "Voltar ao menu principal"
         payload: "/voltar_menu_anterior"
 
-      - title: "Não"
+      - title: "Não preciso mais de ajuda"
         payload: "/nao_ajudar"
 
 
@@ -281,7 +281,7 @@ responses:
   - text: Qual a sua turma?
   utter_requerer_documento:
   - text: Posso ajudar com isso!
-  ##---------------------------------------------------------------##
+  ##-----------------------------------------------------##
   utter_periodo_cancelamento_materia:
   - text: "O prazo para cancelar a matrícula em uma unidade curricular no IFSC Campus Gaspar é de até 25% do período letivo"
   utter_cancelamento_materia:
