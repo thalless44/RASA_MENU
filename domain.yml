@@ -85,7 +85,7 @@ responses:
 
 
   utter_menu_documentos_academicos:
-    - text: 'Estou à disposição para te ajudar com os documentos acadêmicos do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Certo, estou à disposição para te ajudar com os documentos acadêmicos do IFSC. Por favor, selecione a opção que eu possa ajudar'
       buttons:
 
       - title: "Histórico escolar"
@@ -105,7 +105,7 @@ responses:
 
 
   utter_menu_procedimentos_academicos:
-    - text: 'Claro, estou à disposição para te ajudar com os procedimentos acadêmicos do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Claro, consigo te ajudar com os procedimentos acadêmicos. Escolha a alternativa para a qual você precisa de ajuda.'
       buttons:
       - title: "Segunda chamada"
         payload: "/segunda_chamada" 
@@ -125,7 +125,7 @@ responses:
 
 
   utter_menu_documento:
-    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Claro! Estou à disposição para esclarecer dúvidas sobre a documentação dos alunos. Por favor, escolha a opção em que eu posso ser útil.'
       buttons:
       - title: "Cancelar matricula" 
         payload: "/cancelar_matricula" 
@@ -143,7 +143,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_info_ifsc:
-    - text: 'Claro! Estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Tudo bem, estou aqui para fornecer as informações necessárias para os estudantes do IFSC. Selecione a alternativa com a qual você precisa de ajuda.'
       buttons:
       - title: "Localização do IFSC Gaspar" 
         payload: "/localizacao_campus" 
@@ -158,7 +158,7 @@ responses:
         payload: "/voltar_menu_anterior"
 
   utter_menu_calendario_academico:
-    - text: 'Claro! Estou aqui para fornecer informações sobre as datas e eventos do Calendário Acadêmico do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Posso fornecer informações sobre as datas e eventos do Calendário Acadêmico. Indique a opção para a qual você precisa.'
       buttons:
       - title: "Período de validação de Unidade curricular (matérias)"
         payload: "/periodo_validacao" 
@@ -180,7 +180,7 @@ responses:
 
 
   utter_menu_horario_funcionamento:
-    - text: 'Claro! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços do IFSC. Por favor selecione a opção que eu possa ajudar'
+    - text: 'Claro! Estou aqui para fornecer informações sobre o horário de funcionamento das aulas, setores e serviços. Escolha a opção em que posso oferecer suporte.'
       buttons: 
       - title: "Horário de disponibilidade dos coordenadores"
         payload: "/hora_coodenadores"
@@ -217,7 +217,7 @@ responses:
 
 
   utter_menu_tipo_documento:
-    - text: Você pode obter seu documento?
+    - text: "Você pode obter seu documento?"
       buttons: 
       - title: 'Digital'
         payload: "/digital"
@@ -253,7 +253,7 @@ responses:
   utter_default:
   - text: Desculpe, não consigo te ajudar. Você poderia tentar de novo?
   utter_chegada_tardia:
-  - text: Vixe. Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
+  - text: Tente evitar atrasos, ok? Mas, se você chegou atrasado, você pode validar sua chegada tardia para um professor. Para isso, preciso de algumas informações. Vamos lá?
 
   utter_ask_digital:
   - text: Certo. Para emitir o seu documento siga os passos, Primeiro acesse o [SIGAA](https://sigaa.ifsc.edu.br) utilizando seu login e senha; Ao acessar o SIGAA, no menu superior, clique em Ensino e, em seguida, em documento Então,  o seu documento será aberto em uma nova janela. Você pode imprimi-lo ou salvá-lo através do botão “imprimir” no final da página.
