@@ -49,6 +49,8 @@ intents:
 - trancamento_matricula
 - cancelamento_matricula_coponente
 - destrancamento_reingresso
+- provide_credentials
+- request_sigaa_activities
 
 entities:
 - tipo_documento
@@ -65,6 +67,7 @@ actions:
 - validate_requerer_documento_form
 - action_clear_slot
 - action_clear_slot_turma
+- action_get_sigaa_activities
 
 responses:
   utter_menu_opcoes:
@@ -383,6 +386,11 @@ responses:
   utter_destrancamento_reingresso_passo_4:
   - text: "3. Verifique seu e-mail regularmente para acompanhar o andamento do pedido"
 
+  utter_ask_username:
+    - text: "Por favor, informe seu usuário do SIGAA."
+  utter_ask_password:
+    - text: "Agora, informe sua senha."
+
 
 
 
@@ -414,11 +422,11 @@ slots:
     - type: from_intent
       value: true
       intent: nao_possui_conta
-  nome:
+  username:
     type: text
-    mappings:
-    - type: from_entity
-      entity: nome
+  password:
+    type: text
+
   turma:
     type: text
     mappings:

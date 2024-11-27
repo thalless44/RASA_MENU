@@ -20,6 +20,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.types import DomainDict
+from rasa_sdk import Action
+import requests
 
 class ActionProcessarHorarioCampus(Action):
     def name(self) -> Text:
@@ -177,3 +179,40 @@ class ActionClearSlotturma(Action):
     def run(self, dispatcher, tracker, domain):
         return [SlotSet("turma", None)]
 
+
+class ActionGetSigaaActivities(Action):
+    def name(self) -> str:
+        return "action_get_sigaa_activities"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker, domain):
+        username = tracker.get_slot("username")  # Pegue o usuário armazenado no slot
+        password = tracker.get_slot("password")  # Pegue a senha armazenada no slot
+
+        if not username or not password:
+            dispatcher.utter_message(text="Por favor, forneça suas credenciais.")
+            return []
+
+        try:
+            # URL do serviço Node.js
+            sigaa_service_url = "http://localhost:5000/sigaa-activities"
+            
+            response = requests.post(sigaa_service_url, json={"username": username, "password": password})
+            activities = response.json()
+
+            if isinstance(activities, str):  # Caso seja uma mensagem de erro
+                dispatcher.utter_message(text=activities)
+            else:
+                message = "Atividades encontradas:\n"
+                for activity in activities:
+                    message += f"\nCurso: {activity['course']}\n"
+                    message += f"Tipo: {activity['type']}\n"
+                    message += f"Descrição: {activity['description']}\n"
+                    message += f"Data: {activity['date']}\n"
+                    message += f"Entregue: {activity['done']}\n"
+
+                dispatcher.utter_message(text=message)
+
+        except Exception as e:
+            dispatcher.utter_message(text=f"Ocorreu um erro: {str(e)}")
+
+        return []

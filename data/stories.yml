@@ -1,6 +1,21 @@
 version: "3.1"
 
 stories:
+
+  - story: Buscar atividades do SIGAA com credenciais
+    steps:
+      - intent: request_sigaa_activities
+      - action: utter_ask_username
+      - intent: provide_username
+        entities:
+          - username: "thalles.r19"
+      - action: utter_ask_password
+      - intent: provide_password
+        entities:
+          - password: "Thalles90"
+      - action: action_get_sigaa_activities
+
+
   - story: Saudação
     steps:
     - intent: saudar

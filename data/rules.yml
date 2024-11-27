@@ -37,3 +37,20 @@ rules:
   steps:
   - intent: contar_piada
   - action: utter_contar_piada
+
+- rule: Solicitar credenciais do SIGAA
+  steps:
+    - intent: request_sigaa_activities
+    - action: utter_ask_username
+
+- rule: Solicitar senha após usuário
+  steps:
+    - slot_was_set:
+        - username: not null
+    - action: utter_ask_password
+
+  - rule: Buscar atividades no SIGAA
+    steps:
+      - slot_was_set:
+          - password: not null
+      - action: action_get_sigaa_activities
