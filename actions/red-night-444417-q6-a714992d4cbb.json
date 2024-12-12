@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "red-night-444417-q6",
+  "private_key_id": "a714992d4cbb4d8e86be2d9f614a9ca95402dd51",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCxrJ9VCUW4FHwe\n+uFXwYO89WjYk4QZ/sBiMEylOILY/tKRHkM5QJ0Zp95D1PPGKRePdSynpGwcsoby\nsmRp5YyNVS4qrbt/zybAhi6fwP4MOSiSh8EeZC4UpycWFMD6UqWjffxtnpzmtKfR\n0pmuKEizhsEWJHGvLX9H6iO1WTejytbrCELVXFPYXXDxIMrSshbJbp+SdQRFk+Aw\nK0ikC+68MdvQhNAcCP08ocbtue8vmSEQfnVQ3L53zzHTBsDTHkbKP71Iyjl++1pz\nGX3AXfb43ZTebpYCKRPtngRY1wuwLmeQ7UVDyYRMhNMg2MwH+ggxxU1agcNt4p1A\nx19H7SlrAgMBAAECggEAMjA5Z8txOsDqmNO0cNYUkP1fqwHsiG1KSdIr7GXsrEA7\nGcwLIDKMzhD5u359h+XWpmrqfMZ41Zhmf0r+C13Q2KGNo3ek5cMNxseAhxb8jFZf\nDBk155BT5fiblWSyaGONL4QomIx79L1mRGJxj90IQFIZ29falynKcPWGNbVofqcW\nE7A3ZMy4AadvM/2eR4WTf//R8hU1Jvx/Rqwh9Cc5GzVpBPLGf39+bTAKMP/4VRwS\nl4v4s6gwJUSrUdYrH3q0c5sTGd8eBoYFVZ9Ps6P+701sIZFGvwkhIcH5yNIcv89g\neWqBYDDDn08qvJz2sFLMdEYDR2i0m2Hkl4nyqIQgUQKBgQDp1LPkGw7blfZJUeRH\n2pK4hWjloGytW3hp5Flj/18Jjta2GC/jAM2pXJM0YB1r4GdsK7W6aEZx/WTU/REl\n32WhwosQzrwDruOyVBNiBk+HVNVVGW0ZxBT3lrQyFOn21P93eXKtn9y4eXR4eGbe\n4Qh8XB6/RQTnk2FmLRDl3+3GkQKBgQDChPJRZZg47Thhwg8aHNwkBOCFhBuV5Mf/\nIHR627XYeEA9qLxtIjqk6F5J2zGkSER0jE0154DKj2HNNL85rGc3bZY6Ofwt5OPL\nf9lVhg02E1U0oX7ZoQCd+7L6GeOPQNW5726M9IIzqyTY6klghrS+035qxiIU2LF2\njsIYKGkGOwKBgC1PHOh3YcKk5UtBxgUyUjnVCAVut4BD+Co0qCmbQzQb7HjuaOEI\nt9E4cgG1Gh5cJk4sjhMnv3a5Df/DZb478nqMstu343CnQ9G7PuJArMphYtERkzVp\n7FIpbpNBwDAnB7WD3/fKwT8xsaLiWbSYUEegpgiT/CZPRZFB7ENOx8kxAoGBAI/t\npw6rSZL1k75hxKLhr9HG+gpQ0ch7W7Be51DwuQDPGVmGPMXTiejzNrEXSwfvoRdL\nqOW1wgofRZJ88PFPq5/LqlizBvE+Z37vvnQVmDjm3SjwRdfp1XcQAkIkXchlhL7r\ndrU9RgnNHJqT4G9XvO1luChxKk6ad9TtlJgjbnJ5AoGBALTEPIJGNaBuHujV6Cr2\ny2kXl7/qYEzPhyPhJcyaXV33z/2yimnaYgrrEd8TiEw2ZSlPzr4SUmwJYeocTJmz\nE15EGCB9Tbp8GWL0fck2j+H/+8SFxCi3uUDNxTaIqnuge3dArHq4I2OvD87d/sIQ\nXxgfL5dosWKCF+m6nnTgqyTZ\n-----END PRIVATE KEY-----\n",
+  "client_email": "servi-o-google-sheets@red-night-444417-q6.iam.gserviceaccount.com",
+  "client_id": "101654760318386437952",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/servi-o-google-sheets%40red-night-444417-q6.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

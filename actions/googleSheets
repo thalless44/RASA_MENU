@@ -1,0 +1,35 @@
+import pandas as pd
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+filename = "red-night-444417-q6-a714992d4cbb.json"
+
+scopes = [
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive'
+]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name(
+    filename=filename,
+    scopes=scopes
+)
+
+client = gspread.authorize(creds)
+
+# Listar todas as planilhas acessíveis
+## spreadsheets = client.openall()
+
+# Exibir nomes das planilhas
+##for spreadsheet in spreadsheets:
+##    print(spreadsheet.title)
+
+print(client)
+
+planilha_completa = client.open_by_key("15yGtIsNR1KJobVrJZOxGt0iD0ezWz0KSiSWo7l2IbYg")
+planilha = planilha_completa.get_worksheet(1)
+
+
+dados = planilha.get_all_values()
+print(dados)
+
+
